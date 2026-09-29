@@ -1,0 +1,9 @@
+colony: run, light machines, greedy machines, light births, greedy births, mutant births, fifteenth at, crafts in the last 100000, light generation (median), n, greedy generation (median), n
+rich-lw 8 7 7 6 0 497640 0 144510 4 163740 4
+rich-le 8 7 7 6 0 499680 0 142830 4 164100 3
+trickle-lw 5 8 4 7 0 0 2420 173760 2 217200 4
+trickle-le 5 8 4 7 0 0 2431 170070 2 217440 4
+
+generation: pool, light median, n, greedy median, n, greedy over light
+rich 143370 8 163860 7 1.143
+trickle 172050 4 217200 8 1.262

@@ -1,0 +1,5066 @@
+{
+ "name": "e144-trickle-le",
+ "seed": 1,
+ "map_gen": {
+  "autoplace_controls": {
+   "coal": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "stone": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "copper-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "iron-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "uranium-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "crude-oil": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "water": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "trees": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "enemy-base": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "rocks": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   }
+  },
+  "cliff_settings": {
+   "name": "cliff",
+   "cliff_elevation_0": 10,
+   "cliff_elevation_interval": 40,
+   "richness": 0
+  },
+  "peaceful_mode": false,
+  "starting_area": 1,
+  "width": 0,
+  "height": 0
+ },
+ "area": [
+  [
+   -150,
+   -112
+  ],
+  [
+   140,
+   120
+  ]
+ ],
+ "entities": [
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    -101.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    -103.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    -108.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    -67.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    -69.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    -74.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    -33.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    -35.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    -40.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    -6.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    35.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    33.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    28.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    69.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    67.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    62.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -75.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -74.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -74.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -41.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -40.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -40.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    -7.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    -6.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    -6.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    28.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    28.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    61.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    62.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    62.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    95.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    96.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    96.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    129.0,
+    103.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    130.0,
+    101.0
+   ]
+  },
+  {
+   "name": "roboport",
+   "position": [
+    130.0,
+    96.0
+   ],
+   "robots": [
+    {
+     "item": "construction-robot",
+     "count": 50
+    },
+    {
+     "item": "logistic-robot",
+     "count": 50
+    }
+   ]
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    11.5,
+    -7.5
+   ],
+   "tag": "GIFTS",
+   "contents": [
+    {
+     "item": "assembling-machine-2",
+     "count": 14
+    },
+    {
+     "item": "fast-inserter",
+     "count": 26
+    },
+    {
+     "item": "decider-combinator",
+     "count": 30
+    },
+    {
+     "item": "arithmetic-combinator",
+     "count": 12
+    },
+    {
+     "item": "constant-combinator",
+     "count": 12
+    },
+    {
+     "item": "steel-chest",
+     "count": 6
+    },
+    {
+     "item": "requester-chest",
+     "count": 12
+    },
+    {
+     "item": "substation",
+     "count": 6
+    },
+    {
+     "item": "storage-chest",
+     "count": 4
+    },
+    {
+     "item": "medium-electric-pole",
+     "count": 4
+    },
+    {
+     "item": "radar",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "name": "infinity-chest",
+   "position": [
+    20.5,
+    -9.5
+   ],
+   "tag": "INF_iron-plate",
+   "infinity_item": "iron-plate"
+  },
+  {
+   "name": "inserter",
+   "position": [
+    20.5,
+    -8.5
+   ],
+   "direction": "north",
+   "tag": "TI_iron-plate"
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    20.5,
+    -7.5
+   ],
+   "tag": "TS_iron-plate"
+  },
+  {
+   "name": "infinity-chest",
+   "position": [
+    21.5,
+    -9.5
+   ],
+   "tag": "INF_copper-plate",
+   "infinity_item": "copper-plate"
+  },
+  {
+   "name": "inserter",
+   "position": [
+    21.5,
+    -8.5
+   ],
+   "direction": "north",
+   "tag": "TI_copper-plate"
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    21.5,
+    -7.5
+   ],
+   "tag": "TS_copper-plate"
+  },
+  {
+   "name": "infinity-chest",
+   "position": [
+    22.5,
+    -9.5
+   ],
+   "tag": "INF_steel-plate",
+   "infinity_item": "steel-plate"
+  },
+  {
+   "name": "inserter",
+   "position": [
+    22.5,
+    -8.5
+   ],
+   "direction": "north",
+   "tag": "TI_steel-plate"
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    22.5,
+    -7.5
+   ],
+   "tag": "TS_steel-plate"
+  },
+  {
+   "name": "infinity-chest",
+   "position": [
+    23.5,
+    -9.5
+   ],
+   "tag": "INF_plastic-bar",
+   "infinity_item": "plastic-bar"
+  },
+  {
+   "name": "inserter",
+   "position": [
+    23.5,
+    -8.5
+   ],
+   "direction": "north",
+   "tag": "TI_plastic-bar"
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    23.5,
+    -7.5
+   ],
+   "tag": "TS_plastic-bar"
+  }
+ ],
+ "wires": [],
+ "research": [
+  "electronics",
+  "steam-power",
+  "automation-science-pack",
+  "logistic-science-pack",
+  "automation",
+  "steel-processing",
+  "automation-2",
+  "fast-inserter",
+  "circuit-network",
+  "plastics",
+  "advanced-circuit",
+  "electric-energy-distribution-1",
+  "electric-energy-distribution-2",
+  "construction-robotics",
+  "logistic-robotics",
+  "logistic-system",
+  "radar"
+ ],
+ "growth": {
+  "string": "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",
+  "expect": [
+   60,
+   68
+  ],
+  "anchor": "constant-combinator",
+  "slots": [
+   {
+    "position": [
+     -89.5,
+     -97.0
+    ],
+    "anchor": [
+     -101.5,
+     -96.5
+    ],
+    "area": [
+     [
+      -106,
+      -108
+     ],
+     [
+      -77,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     -97.0
+    ],
+    "anchor": [
+     -67.5,
+     -96.5
+    ],
+    "area": [
+     [
+      -72,
+      -108
+     ],
+     [
+      -43,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     -97.0
+    ],
+    "anchor": [
+     -33.5,
+     -96.5
+    ],
+    "area": [
+     [
+      -38,
+      -108
+     ],
+     [
+      -9,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     -97.0
+    ],
+    "anchor": [
+     0.5,
+     -96.5
+    ],
+    "area": [
+     [
+      -4,
+      -108
+     ],
+     [
+      25,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     -97.0
+    ],
+    "anchor": [
+     34.5,
+     -96.5
+    ],
+    "area": [
+     [
+      30,
+      -108
+     ],
+     [
+      59,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     -97.0
+    ],
+    "anchor": [
+     68.5,
+     -96.5
+    ],
+    "area": [
+     [
+      64,
+      -108
+     ],
+     [
+      93,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     -97.0
+    ],
+    "anchor": [
+     102.5,
+     -96.5
+    ],
+    "area": [
+     [
+      98,
+      -108
+     ],
+     [
+      127,
+      -86
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     -63.0
+    ],
+    "anchor": [
+     -101.5,
+     -62.5
+    ],
+    "area": [
+     [
+      -106,
+      -74
+     ],
+     [
+      -77,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     -63.0
+    ],
+    "anchor": [
+     -67.5,
+     -62.5
+    ],
+    "area": [
+     [
+      -72,
+      -74
+     ],
+     [
+      -43,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     -63.0
+    ],
+    "anchor": [
+     -33.5,
+     -62.5
+    ],
+    "area": [
+     [
+      -38,
+      -74
+     ],
+     [
+      -9,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     -63.0
+    ],
+    "anchor": [
+     0.5,
+     -62.5
+    ],
+    "area": [
+     [
+      -4,
+      -74
+     ],
+     [
+      25,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     -63.0
+    ],
+    "anchor": [
+     34.5,
+     -62.5
+    ],
+    "area": [
+     [
+      30,
+      -74
+     ],
+     [
+      59,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     -63.0
+    ],
+    "anchor": [
+     68.5,
+     -62.5
+    ],
+    "area": [
+     [
+      64,
+      -74
+     ],
+     [
+      93,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     -63.0
+    ],
+    "anchor": [
+     102.5,
+     -62.5
+    ],
+    "area": [
+     [
+      98,
+      -74
+     ],
+     [
+      127,
+      -52
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     -29.0
+    ],
+    "anchor": [
+     -101.5,
+     -28.5
+    ],
+    "area": [
+     [
+      -106,
+      -40
+     ],
+     [
+      -77,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     -29.0
+    ],
+    "anchor": [
+     -67.5,
+     -28.5
+    ],
+    "area": [
+     [
+      -72,
+      -40
+     ],
+     [
+      -43,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     -29.0
+    ],
+    "anchor": [
+     -33.5,
+     -28.5
+    ],
+    "area": [
+     [
+      -38,
+      -40
+     ],
+     [
+      -9,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     -29.0
+    ],
+    "anchor": [
+     0.5,
+     -28.5
+    ],
+    "area": [
+     [
+      -4,
+      -40
+     ],
+     [
+      25,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     -29.0
+    ],
+    "anchor": [
+     34.5,
+     -28.5
+    ],
+    "area": [
+     [
+      30,
+      -40
+     ],
+     [
+      59,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     -29.0
+    ],
+    "anchor": [
+     68.5,
+     -28.5
+    ],
+    "area": [
+     [
+      64,
+      -40
+     ],
+     [
+      93,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     -29.0
+    ],
+    "anchor": [
+     102.5,
+     -28.5
+    ],
+    "area": [
+     [
+      98,
+      -40
+     ],
+     [
+      127,
+      -18
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     5.0
+    ],
+    "anchor": [
+     -101.5,
+     5.5
+    ],
+    "area": [
+     [
+      -106,
+      -6
+     ],
+     [
+      -77,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     5.0
+    ],
+    "anchor": [
+     -67.5,
+     5.5
+    ],
+    "area": [
+     [
+      -72,
+      -6
+     ],
+     [
+      -43,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     5.0
+    ],
+    "anchor": [
+     -33.5,
+     5.5
+    ],
+    "area": [
+     [
+      -38,
+      -6
+     ],
+     [
+      -9,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     5.0
+    ],
+    "anchor": [
+     34.5,
+     5.5
+    ],
+    "area": [
+     [
+      30,
+      -6
+     ],
+     [
+      59,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     5.0
+    ],
+    "anchor": [
+     68.5,
+     5.5
+    ],
+    "area": [
+     [
+      64,
+      -6
+     ],
+     [
+      93,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     5.0
+    ],
+    "anchor": [
+     102.5,
+     5.5
+    ],
+    "area": [
+     [
+      98,
+      -6
+     ],
+     [
+      127,
+      16
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     39.0
+    ],
+    "anchor": [
+     -101.5,
+     39.5
+    ],
+    "area": [
+     [
+      -106,
+      28
+     ],
+     [
+      -77,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     39.0
+    ],
+    "anchor": [
+     -67.5,
+     39.5
+    ],
+    "area": [
+     [
+      -72,
+      28
+     ],
+     [
+      -43,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     39.0
+    ],
+    "anchor": [
+     -33.5,
+     39.5
+    ],
+    "area": [
+     [
+      -38,
+      28
+     ],
+     [
+      -9,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     39.0
+    ],
+    "anchor": [
+     0.5,
+     39.5
+    ],
+    "area": [
+     [
+      -4,
+      28
+     ],
+     [
+      25,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     39.0
+    ],
+    "anchor": [
+     34.5,
+     39.5
+    ],
+    "area": [
+     [
+      30,
+      28
+     ],
+     [
+      59,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     39.0
+    ],
+    "anchor": [
+     68.5,
+     39.5
+    ],
+    "area": [
+     [
+      64,
+      28
+     ],
+     [
+      93,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     39.0
+    ],
+    "anchor": [
+     102.5,
+     39.5
+    ],
+    "area": [
+     [
+      98,
+      28
+     ],
+     [
+      127,
+      50
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     73.0
+    ],
+    "anchor": [
+     -101.5,
+     73.5
+    ],
+    "area": [
+     [
+      -106,
+      62
+     ],
+     [
+      -77,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     73.0
+    ],
+    "anchor": [
+     -67.5,
+     73.5
+    ],
+    "area": [
+     [
+      -72,
+      62
+     ],
+     [
+      -43,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     73.0
+    ],
+    "anchor": [
+     -33.5,
+     73.5
+    ],
+    "area": [
+     [
+      -38,
+      62
+     ],
+     [
+      -9,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     73.0
+    ],
+    "anchor": [
+     0.5,
+     73.5
+    ],
+    "area": [
+     [
+      -4,
+      62
+     ],
+     [
+      25,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     73.0
+    ],
+    "anchor": [
+     34.5,
+     73.5
+    ],
+    "area": [
+     [
+      30,
+      62
+     ],
+     [
+      59,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     73.0
+    ],
+    "anchor": [
+     68.5,
+     73.5
+    ],
+    "area": [
+     [
+      64,
+      62
+     ],
+     [
+      93,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     73.0
+    ],
+    "anchor": [
+     102.5,
+     73.5
+    ],
+    "area": [
+     [
+      98,
+      62
+     ],
+     [
+      127,
+      84
+     ]
+    ]
+   },
+   {
+    "position": [
+     -89.5,
+     107.0
+    ],
+    "anchor": [
+     -101.5,
+     107.5
+    ],
+    "area": [
+     [
+      -106,
+      96
+     ],
+     [
+      -77,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     -55.5,
+     107.0
+    ],
+    "anchor": [
+     -67.5,
+     107.5
+    ],
+    "area": [
+     [
+      -72,
+      96
+     ],
+     [
+      -43,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     -21.5,
+     107.0
+    ],
+    "anchor": [
+     -33.5,
+     107.5
+    ],
+    "area": [
+     [
+      -38,
+      96
+     ],
+     [
+      -9,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     12.5,
+     107.0
+    ],
+    "anchor": [
+     0.5,
+     107.5
+    ],
+    "area": [
+     [
+      -4,
+      96
+     ],
+     [
+      25,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     46.5,
+     107.0
+    ],
+    "anchor": [
+     34.5,
+     107.5
+    ],
+    "area": [
+     [
+      30,
+      96
+     ],
+     [
+      59,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     80.5,
+     107.0
+    ],
+    "anchor": [
+     68.5,
+     107.5
+    ],
+    "area": [
+     [
+      64,
+      96
+     ],
+     [
+      93,
+      118
+     ]
+    ]
+   },
+   {
+    "position": [
+     114.5,
+     107.0
+    ],
+    "anchor": [
+     102.5,
+     107.5
+    ],
+    "area": [
+     [
+      98,
+      96
+     ],
+     [
+      127,
+      118
+     ]
+    ]
+   }
+  ],
+  "initial": 0,
+  "per_done": 1,
+  "deploy": {
+   "name": "decider-combinator",
+   "offset": [
+    19.0,
+    -7.5
+   ],
+   "connector": "combinator_output_red",
+   "request": "signal-D",
+   "dir": "signal-R",
+   "step": 34,
+   "initial": [
+    [
+     24,
+     2
+    ],
+    [
+     25,
+     1
+    ]
+   ],
+   "lineage": "signal-B"
+  },
+  "strings": [
+   "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"
+  ],
+  "shift": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "count_ghosts": true,
+ "ghost_areas": {
+  "s1": [
+   [
+    -106,
+    -108
+   ],
+   [
+    -77,
+    -86
+   ]
+  ],
+  "s2": [
+   [
+    -72,
+    -108
+   ],
+   [
+    -43,
+    -86
+   ]
+  ],
+  "s3": [
+   [
+    -38,
+    -108
+   ],
+   [
+    -9,
+    -86
+   ]
+  ],
+  "s4": [
+   [
+    -4,
+    -108
+   ],
+   [
+    25,
+    -86
+   ]
+  ],
+  "s5": [
+   [
+    30,
+    -108
+   ],
+   [
+    59,
+    -86
+   ]
+  ],
+  "s6": [
+   [
+    64,
+    -108
+   ],
+   [
+    93,
+    -86
+   ]
+  ],
+  "s7": [
+   [
+    98,
+    -108
+   ],
+   [
+    127,
+    -86
+   ]
+  ],
+  "s8": [
+   [
+    -106,
+    -74
+   ],
+   [
+    -77,
+    -52
+   ]
+  ],
+  "s9": [
+   [
+    -72,
+    -74
+   ],
+   [
+    -43,
+    -52
+   ]
+  ],
+  "s10": [
+   [
+    -38,
+    -74
+   ],
+   [
+    -9,
+    -52
+   ]
+  ],
+  "s11": [
+   [
+    -4,
+    -74
+   ],
+   [
+    25,
+    -52
+   ]
+  ],
+  "s12": [
+   [
+    30,
+    -74
+   ],
+   [
+    59,
+    -52
+   ]
+  ],
+  "s13": [
+   [
+    64,
+    -74
+   ],
+   [
+    93,
+    -52
+   ]
+  ],
+  "s14": [
+   [
+    98,
+    -74
+   ],
+   [
+    127,
+    -52
+   ]
+  ],
+  "s15": [
+   [
+    -106,
+    -40
+   ],
+   [
+    -77,
+    -18
+   ]
+  ],
+  "s16": [
+   [
+    -72,
+    -40
+   ],
+   [
+    -43,
+    -18
+   ]
+  ],
+  "s17": [
+   [
+    -38,
+    -40
+   ],
+   [
+    -9,
+    -18
+   ]
+  ],
+  "s18": [
+   [
+    -4,
+    -40
+   ],
+   [
+    25,
+    -18
+   ]
+  ],
+  "s19": [
+   [
+    30,
+    -40
+   ],
+   [
+    59,
+    -18
+   ]
+  ],
+  "s20": [
+   [
+    64,
+    -40
+   ],
+   [
+    93,
+    -18
+   ]
+  ],
+  "s21": [
+   [
+    98,
+    -40
+   ],
+   [
+    127,
+    -18
+   ]
+  ],
+  "s22": [
+   [
+    -106,
+    -6
+   ],
+   [
+    -77,
+    16
+   ]
+  ],
+  "s23": [
+   [
+    -72,
+    -6
+   ],
+   [
+    -43,
+    16
+   ]
+  ],
+  "s24": [
+   [
+    -38,
+    -6
+   ],
+   [
+    -9,
+    16
+   ]
+  ],
+  "s25": [
+   [
+    30,
+    -6
+   ],
+   [
+    59,
+    16
+   ]
+  ],
+  "s26": [
+   [
+    64,
+    -6
+   ],
+   [
+    93,
+    16
+   ]
+  ],
+  "s27": [
+   [
+    98,
+    -6
+   ],
+   [
+    127,
+    16
+   ]
+  ],
+  "s28": [
+   [
+    -106,
+    28
+   ],
+   [
+    -77,
+    50
+   ]
+  ],
+  "s29": [
+   [
+    -72,
+    28
+   ],
+   [
+    -43,
+    50
+   ]
+  ],
+  "s30": [
+   [
+    -38,
+    28
+   ],
+   [
+    -9,
+    50
+   ]
+  ],
+  "s31": [
+   [
+    -4,
+    28
+   ],
+   [
+    25,
+    50
+   ]
+  ],
+  "s32": [
+   [
+    30,
+    28
+   ],
+   [
+    59,
+    50
+   ]
+  ],
+  "s33": [
+   [
+    64,
+    28
+   ],
+   [
+    93,
+    50
+   ]
+  ],
+  "s34": [
+   [
+    98,
+    28
+   ],
+   [
+    127,
+    50
+   ]
+  ],
+  "s35": [
+   [
+    -106,
+    62
+   ],
+   [
+    -77,
+    84
+   ]
+  ],
+  "s36": [
+   [
+    -72,
+    62
+   ],
+   [
+    -43,
+    84
+   ]
+  ],
+  "s37": [
+   [
+    -38,
+    62
+   ],
+   [
+    -9,
+    84
+   ]
+  ],
+  "s38": [
+   [
+    -4,
+    62
+   ],
+   [
+    25,
+    84
+   ]
+  ],
+  "s39": [
+   [
+    30,
+    62
+   ],
+   [
+    59,
+    84
+   ]
+  ],
+  "s40": [
+   [
+    64,
+    62
+   ],
+   [
+    93,
+    84
+   ]
+  ],
+  "s41": [
+   [
+    98,
+    62
+   ],
+   [
+    127,
+    84
+   ]
+  ],
+  "s42": [
+   [
+    -106,
+    96
+   ],
+   [
+    -77,
+    118
+   ]
+  ],
+  "s43": [
+   [
+    -72,
+    96
+   ],
+   [
+    -43,
+    118
+   ]
+  ],
+  "s44": [
+   [
+    -38,
+    96
+   ],
+   [
+    -9,
+    118
+   ]
+  ],
+  "s45": [
+   [
+    -4,
+    96
+   ],
+   [
+    25,
+    118
+   ]
+  ],
+  "s46": [
+   [
+    30,
+    96
+   ],
+   [
+    59,
+    118
+   ]
+  ],
+  "s47": [
+   [
+    64,
+    96
+   ],
+   [
+    93,
+    118
+   ]
+  ],
+  "s48": [
+   [
+    98,
+    96
+   ],
+   [
+    127,
+    118
+   ]
+  ]
+ },
+ "ghost_names": true,
+ "watch": [
+  {
+   "id": "m0M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": 0.5
+  },
+  {
+   "id": "m0Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": -0.5
+  },
+  {
+   "id": "m1M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": -101.5
+  },
+  {
+   "id": "m1Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": -102.5
+  },
+  {
+   "id": "m2M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": -101.5
+  },
+  {
+   "id": "m2Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": -102.5
+  },
+  {
+   "id": "m3M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": -101.5
+  },
+  {
+   "id": "m3Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": -102.5
+  },
+  {
+   "id": "m4M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": -101.5
+  },
+  {
+   "id": "m4Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": -102.5
+  },
+  {
+   "id": "m5M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": -101.5
+  },
+  {
+   "id": "m5Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": -102.5
+  },
+  {
+   "id": "m6M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": -101.5
+  },
+  {
+   "id": "m6Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": -102.5
+  },
+  {
+   "id": "m7M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": -101.5
+  },
+  {
+   "id": "m7Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": -102.5
+  },
+  {
+   "id": "m8M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": -67.5
+  },
+  {
+   "id": "m8Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": -68.5
+  },
+  {
+   "id": "m9M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": -67.5
+  },
+  {
+   "id": "m9Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": -68.5
+  },
+  {
+   "id": "m10M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": -67.5
+  },
+  {
+   "id": "m10Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": -68.5
+  },
+  {
+   "id": "m11M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": -67.5
+  },
+  {
+   "id": "m11Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": -68.5
+  },
+  {
+   "id": "m12M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": -67.5
+  },
+  {
+   "id": "m12Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": -68.5
+  },
+  {
+   "id": "m13M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": -67.5
+  },
+  {
+   "id": "m13Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": -68.5
+  },
+  {
+   "id": "m14M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": -67.5
+  },
+  {
+   "id": "m14Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": -68.5
+  },
+  {
+   "id": "m15M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": -33.5
+  },
+  {
+   "id": "m15Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": -34.5
+  },
+  {
+   "id": "m16M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": -33.5
+  },
+  {
+   "id": "m16Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": -34.5
+  },
+  {
+   "id": "m17M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": -33.5
+  },
+  {
+   "id": "m17Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": -34.5
+  },
+  {
+   "id": "m18M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": -33.5
+  },
+  {
+   "id": "m18Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": -34.5
+  },
+  {
+   "id": "m19M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": -33.5
+  },
+  {
+   "id": "m19Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": -34.5
+  },
+  {
+   "id": "m20M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": -33.5
+  },
+  {
+   "id": "m20Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": -34.5
+  },
+  {
+   "id": "m21M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": -33.5
+  },
+  {
+   "id": "m21Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": -34.5
+  },
+  {
+   "id": "m22M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": 0.5
+  },
+  {
+   "id": "m22Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": -0.5
+  },
+  {
+   "id": "m23M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": 0.5
+  },
+  {
+   "id": "m23Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": -0.5
+  },
+  {
+   "id": "m24M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": 0.5
+  },
+  {
+   "id": "m24Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": -0.5
+  },
+  {
+   "id": "m25M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": 0.5
+  },
+  {
+   "id": "m25Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": -0.5
+  },
+  {
+   "id": "m26M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": 0.5
+  },
+  {
+   "id": "m26Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": -0.5
+  },
+  {
+   "id": "m27M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": 0.5
+  },
+  {
+   "id": "m27Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": -0.5
+  },
+  {
+   "id": "m28M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": 34.5
+  },
+  {
+   "id": "m28Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": 33.5
+  },
+  {
+   "id": "m29M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": 34.5
+  },
+  {
+   "id": "m29Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": 33.5
+  },
+  {
+   "id": "m30M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": 34.5
+  },
+  {
+   "id": "m30Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": 33.5
+  },
+  {
+   "id": "m31M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": 34.5
+  },
+  {
+   "id": "m31Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": 33.5
+  },
+  {
+   "id": "m32M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": 34.5
+  },
+  {
+   "id": "m32Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": 33.5
+  },
+  {
+   "id": "m33M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": 34.5
+  },
+  {
+   "id": "m33Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": 33.5
+  },
+  {
+   "id": "m34M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": 34.5
+  },
+  {
+   "id": "m34Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": 33.5
+  },
+  {
+   "id": "m35M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": 68.5
+  },
+  {
+   "id": "m35Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": 67.5
+  },
+  {
+   "id": "m36M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": 68.5
+  },
+  {
+   "id": "m36Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": 67.5
+  },
+  {
+   "id": "m37M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": 68.5
+  },
+  {
+   "id": "m37Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": 67.5
+  },
+  {
+   "id": "m38M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": 68.5
+  },
+  {
+   "id": "m38Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": 67.5
+  },
+  {
+   "id": "m39M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": 68.5
+  },
+  {
+   "id": "m39Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": 67.5
+  },
+  {
+   "id": "m40M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": 68.5
+  },
+  {
+   "id": "m40Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": 67.5
+  },
+  {
+   "id": "m41M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": 68.5
+  },
+  {
+   "id": "m41Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": 67.5
+  },
+  {
+   "id": "m42M",
+   "name": "assembling-machine-2",
+   "x": -91.5,
+   "y": 102.5
+  },
+  {
+   "id": "m42Bi",
+   "name": "steel-chest",
+   "x": -88.5,
+   "y": 101.5
+  },
+  {
+   "id": "m43M",
+   "name": "assembling-machine-2",
+   "x": -57.5,
+   "y": 102.5
+  },
+  {
+   "id": "m43Bi",
+   "name": "steel-chest",
+   "x": -54.5,
+   "y": 101.5
+  },
+  {
+   "id": "m44M",
+   "name": "assembling-machine-2",
+   "x": -23.5,
+   "y": 102.5
+  },
+  {
+   "id": "m44Bi",
+   "name": "steel-chest",
+   "x": -20.5,
+   "y": 101.5
+  },
+  {
+   "id": "m45M",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": 102.5
+  },
+  {
+   "id": "m45Bi",
+   "name": "steel-chest",
+   "x": 13.5,
+   "y": 101.5
+  },
+  {
+   "id": "m46M",
+   "name": "assembling-machine-2",
+   "x": 44.5,
+   "y": 102.5
+  },
+  {
+   "id": "m46Bi",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": 101.5
+  },
+  {
+   "id": "m47M",
+   "name": "assembling-machine-2",
+   "x": 78.5,
+   "y": 102.5
+  },
+  {
+   "id": "m47Bi",
+   "name": "steel-chest",
+   "x": 81.5,
+   "y": 101.5
+  },
+  {
+   "id": "m48M",
+   "name": "assembling-machine-2",
+   "x": 112.5,
+   "y": 102.5
+  },
+  {
+   "id": "m48Bi",
+   "name": "steel-chest",
+   "x": 115.5,
+   "y": 101.5
+  },
+  {
+   "id": "m0R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -0.5
+  },
+  {
+   "id": "m0R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 0.5
+  },
+  {
+   "id": "m0R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 1.5
+  },
+  {
+   "id": "m0R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": -2.5
+  },
+  {
+   "id": "m1R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -102.5
+  },
+  {
+   "id": "m1R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -101.5
+  },
+  {
+   "id": "m1R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -100.5
+  },
+  {
+   "id": "m1R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": -104.5
+  },
+  {
+   "id": "m2R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -102.5
+  },
+  {
+   "id": "m2R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -101.5
+  },
+  {
+   "id": "m2R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -100.5
+  },
+  {
+   "id": "m2R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": -104.5
+  },
+  {
+   "id": "m3R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -102.5
+  },
+  {
+   "id": "m3R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -101.5
+  },
+  {
+   "id": "m3R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -100.5
+  },
+  {
+   "id": "m3R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": -104.5
+  },
+  {
+   "id": "m4R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -102.5
+  },
+  {
+   "id": "m4R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -101.5
+  },
+  {
+   "id": "m4R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -100.5
+  },
+  {
+   "id": "m4R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": -104.5
+  },
+  {
+   "id": "m5R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -102.5
+  },
+  {
+   "id": "m5R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -101.5
+  },
+  {
+   "id": "m5R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -100.5
+  },
+  {
+   "id": "m5R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": -104.5
+  },
+  {
+   "id": "m6R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -102.5
+  },
+  {
+   "id": "m6R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -101.5
+  },
+  {
+   "id": "m6R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -100.5
+  },
+  {
+   "id": "m6R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": -104.5
+  },
+  {
+   "id": "m7R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -102.5
+  },
+  {
+   "id": "m7R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -101.5
+  },
+  {
+   "id": "m7R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -100.5
+  },
+  {
+   "id": "m7R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": -104.5
+  },
+  {
+   "id": "m8R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -68.5
+  },
+  {
+   "id": "m8R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -67.5
+  },
+  {
+   "id": "m8R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -66.5
+  },
+  {
+   "id": "m8R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": -70.5
+  },
+  {
+   "id": "m9R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -68.5
+  },
+  {
+   "id": "m9R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -67.5
+  },
+  {
+   "id": "m9R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -66.5
+  },
+  {
+   "id": "m9R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": -70.5
+  },
+  {
+   "id": "m10R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -68.5
+  },
+  {
+   "id": "m10R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -67.5
+  },
+  {
+   "id": "m10R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -66.5
+  },
+  {
+   "id": "m10R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": -70.5
+  },
+  {
+   "id": "m11R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -68.5
+  },
+  {
+   "id": "m11R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -67.5
+  },
+  {
+   "id": "m11R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -66.5
+  },
+  {
+   "id": "m11R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": -70.5
+  },
+  {
+   "id": "m12R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -68.5
+  },
+  {
+   "id": "m12R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -67.5
+  },
+  {
+   "id": "m12R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -66.5
+  },
+  {
+   "id": "m12R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": -70.5
+  },
+  {
+   "id": "m13R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -68.5
+  },
+  {
+   "id": "m13R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -67.5
+  },
+  {
+   "id": "m13R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -66.5
+  },
+  {
+   "id": "m13R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": -70.5
+  },
+  {
+   "id": "m14R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -68.5
+  },
+  {
+   "id": "m14R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -67.5
+  },
+  {
+   "id": "m14R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -66.5
+  },
+  {
+   "id": "m14R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": -70.5
+  },
+  {
+   "id": "m15R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -34.5
+  },
+  {
+   "id": "m15R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -33.5
+  },
+  {
+   "id": "m15R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -32.5
+  },
+  {
+   "id": "m15R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": -36.5
+  },
+  {
+   "id": "m16R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -34.5
+  },
+  {
+   "id": "m16R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -33.5
+  },
+  {
+   "id": "m16R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -32.5
+  },
+  {
+   "id": "m16R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": -36.5
+  },
+  {
+   "id": "m17R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -34.5
+  },
+  {
+   "id": "m17R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -33.5
+  },
+  {
+   "id": "m17R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -32.5
+  },
+  {
+   "id": "m17R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": -36.5
+  },
+  {
+   "id": "m18R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -34.5
+  },
+  {
+   "id": "m18R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -33.5
+  },
+  {
+   "id": "m18R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": -32.5
+  },
+  {
+   "id": "m18R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": -36.5
+  },
+  {
+   "id": "m19R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -34.5
+  },
+  {
+   "id": "m19R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -33.5
+  },
+  {
+   "id": "m19R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -32.5
+  },
+  {
+   "id": "m19R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": -36.5
+  },
+  {
+   "id": "m20R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -34.5
+  },
+  {
+   "id": "m20R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -33.5
+  },
+  {
+   "id": "m20R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -32.5
+  },
+  {
+   "id": "m20R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": -36.5
+  },
+  {
+   "id": "m21R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -34.5
+  },
+  {
+   "id": "m21R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -33.5
+  },
+  {
+   "id": "m21R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -32.5
+  },
+  {
+   "id": "m21R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": -36.5
+  },
+  {
+   "id": "m22R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": -0.5
+  },
+  {
+   "id": "m22R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 0.5
+  },
+  {
+   "id": "m22R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 1.5
+  },
+  {
+   "id": "m22R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": -2.5
+  },
+  {
+   "id": "m23R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": -0.5
+  },
+  {
+   "id": "m23R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 0.5
+  },
+  {
+   "id": "m23R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 1.5
+  },
+  {
+   "id": "m23R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": -2.5
+  },
+  {
+   "id": "m24R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": -0.5
+  },
+  {
+   "id": "m24R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 0.5
+  },
+  {
+   "id": "m24R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 1.5
+  },
+  {
+   "id": "m24R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": -2.5
+  },
+  {
+   "id": "m25R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": -0.5
+  },
+  {
+   "id": "m25R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 0.5
+  },
+  {
+   "id": "m25R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 1.5
+  },
+  {
+   "id": "m25R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": -2.5
+  },
+  {
+   "id": "m26R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": -0.5
+  },
+  {
+   "id": "m26R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 0.5
+  },
+  {
+   "id": "m26R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 1.5
+  },
+  {
+   "id": "m26R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": -2.5
+  },
+  {
+   "id": "m27R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": -0.5
+  },
+  {
+   "id": "m27R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 0.5
+  },
+  {
+   "id": "m27R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 1.5
+  },
+  {
+   "id": "m27R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": -2.5
+  },
+  {
+   "id": "m28R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 33.5
+  },
+  {
+   "id": "m28R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 34.5
+  },
+  {
+   "id": "m28R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 35.5
+  },
+  {
+   "id": "m28R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": 31.5
+  },
+  {
+   "id": "m29R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 33.5
+  },
+  {
+   "id": "m29R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 34.5
+  },
+  {
+   "id": "m29R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 35.5
+  },
+  {
+   "id": "m29R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": 31.5
+  },
+  {
+   "id": "m30R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 33.5
+  },
+  {
+   "id": "m30R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 34.5
+  },
+  {
+   "id": "m30R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 35.5
+  },
+  {
+   "id": "m30R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": 31.5
+  },
+  {
+   "id": "m31R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 33.5
+  },
+  {
+   "id": "m31R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 34.5
+  },
+  {
+   "id": "m31R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 35.5
+  },
+  {
+   "id": "m31R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": 31.5
+  },
+  {
+   "id": "m32R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 33.5
+  },
+  {
+   "id": "m32R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 34.5
+  },
+  {
+   "id": "m32R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 35.5
+  },
+  {
+   "id": "m32R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": 31.5
+  },
+  {
+   "id": "m33R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 33.5
+  },
+  {
+   "id": "m33R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 34.5
+  },
+  {
+   "id": "m33R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 35.5
+  },
+  {
+   "id": "m33R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": 31.5
+  },
+  {
+   "id": "m34R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 33.5
+  },
+  {
+   "id": "m34R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 34.5
+  },
+  {
+   "id": "m34R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 35.5
+  },
+  {
+   "id": "m34R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": 31.5
+  },
+  {
+   "id": "m35R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 67.5
+  },
+  {
+   "id": "m35R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 68.5
+  },
+  {
+   "id": "m35R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 69.5
+  },
+  {
+   "id": "m35R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": 65.5
+  },
+  {
+   "id": "m36R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 67.5
+  },
+  {
+   "id": "m36R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 68.5
+  },
+  {
+   "id": "m36R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 69.5
+  },
+  {
+   "id": "m36R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": 65.5
+  },
+  {
+   "id": "m37R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 67.5
+  },
+  {
+   "id": "m37R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 68.5
+  },
+  {
+   "id": "m37R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 69.5
+  },
+  {
+   "id": "m37R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": 65.5
+  },
+  {
+   "id": "m38R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 67.5
+  },
+  {
+   "id": "m38R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 68.5
+  },
+  {
+   "id": "m38R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 69.5
+  },
+  {
+   "id": "m38R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": 65.5
+  },
+  {
+   "id": "m39R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 67.5
+  },
+  {
+   "id": "m39R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 68.5
+  },
+  {
+   "id": "m39R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 69.5
+  },
+  {
+   "id": "m39R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": 65.5
+  },
+  {
+   "id": "m40R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 67.5
+  },
+  {
+   "id": "m40R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 68.5
+  },
+  {
+   "id": "m40R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 69.5
+  },
+  {
+   "id": "m40R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": 65.5
+  },
+  {
+   "id": "m41R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 67.5
+  },
+  {
+   "id": "m41R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 68.5
+  },
+  {
+   "id": "m41R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 69.5
+  },
+  {
+   "id": "m41R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": 65.5
+  },
+  {
+   "id": "m42R1",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 101.5
+  },
+  {
+   "id": "m42R2",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 102.5
+  },
+  {
+   "id": "m42R3",
+   "name": "requester-chest",
+   "x": -94.5,
+   "y": 103.5
+  },
+  {
+   "id": "m42R4",
+   "name": "requester-chest",
+   "x": -92.5,
+   "y": 99.5
+  },
+  {
+   "id": "m43R1",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 101.5
+  },
+  {
+   "id": "m43R2",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 102.5
+  },
+  {
+   "id": "m43R3",
+   "name": "requester-chest",
+   "x": -60.5,
+   "y": 103.5
+  },
+  {
+   "id": "m43R4",
+   "name": "requester-chest",
+   "x": -58.5,
+   "y": 99.5
+  },
+  {
+   "id": "m44R1",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 101.5
+  },
+  {
+   "id": "m44R2",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 102.5
+  },
+  {
+   "id": "m44R3",
+   "name": "requester-chest",
+   "x": -26.5,
+   "y": 103.5
+  },
+  {
+   "id": "m44R4",
+   "name": "requester-chest",
+   "x": -24.5,
+   "y": 99.5
+  },
+  {
+   "id": "m45R1",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 101.5
+  },
+  {
+   "id": "m45R2",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 102.5
+  },
+  {
+   "id": "m45R3",
+   "name": "requester-chest",
+   "x": 7.5,
+   "y": 103.5
+  },
+  {
+   "id": "m45R4",
+   "name": "requester-chest",
+   "x": 9.5,
+   "y": 99.5
+  },
+  {
+   "id": "m46R1",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 101.5
+  },
+  {
+   "id": "m46R2",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 102.5
+  },
+  {
+   "id": "m46R3",
+   "name": "requester-chest",
+   "x": 41.5,
+   "y": 103.5
+  },
+  {
+   "id": "m46R4",
+   "name": "requester-chest",
+   "x": 43.5,
+   "y": 99.5
+  },
+  {
+   "id": "m47R1",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 101.5
+  },
+  {
+   "id": "m47R2",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 102.5
+  },
+  {
+   "id": "m47R3",
+   "name": "requester-chest",
+   "x": 75.5,
+   "y": 103.5
+  },
+  {
+   "id": "m47R4",
+   "name": "requester-chest",
+   "x": 77.5,
+   "y": 99.5
+  },
+  {
+   "id": "m48R1",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 101.5
+  },
+  {
+   "id": "m48R2",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 102.5
+  },
+  {
+   "id": "m48R3",
+   "name": "requester-chest",
+   "x": 109.5,
+   "y": 103.5
+  },
+  {
+   "id": "m48R4",
+   "name": "requester-chest",
+   "x": 111.5,
+   "y": 99.5
+  },
+  {
+   "id": "trickle_iron-plate",
+   "name": "storage-chest",
+   "x": 20.5,
+   "y": -7.5
+  },
+  {
+   "id": "trickle_copper-plate",
+   "name": "storage-chest",
+   "x": 21.5,
+   "y": -7.5
+  },
+  {
+   "id": "trickle_steel-plate",
+   "name": "storage-chest",
+   "x": 22.5,
+   "y": -7.5
+  },
+  {
+   "id": "trickle_plastic-bar",
+   "name": "storage-chest",
+   "x": 23.5,
+   "y": -7.5
+  }
+ ],
+ "chunks_radius": 10,
+ "progress": [
+  "M"
+ ],
+ "warmup": 0,
+ "window": 1000,
+ "ticks": 800000
+}

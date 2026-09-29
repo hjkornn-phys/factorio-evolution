@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use or discuss this work, please cite it as below."
+title: "factorio-evolution: natural selection among self-copying machines in vanilla Factorio"
+type: software
+authors:
+  - alias: "hjkornn-phys"
+repository-code: "https://github.com/hjkornn-phys/factorio-evolution"
+abstract: >-
+  A colony of self-copying machines in vanilla Factorio 2.1 in which a
+  cheaper lineage outgrows a costlier one by natural selection; the only
+  scripted act is placing a machine's blueprint where it asks, and plates
+  and power are supplied. Light's share 0.587 against 0.380 in a
+  cost-free control, 10 runs an arm, exact p = 5.4e-6.
+keywords:
+  - factorio
+  - artificial-life
+  - self-replication
+  - evolution
+  - circuit-network
+license: MIT
+date-released: 2026-09-30
