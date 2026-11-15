@@ -93,8 +93,9 @@ scrap, placed by hand; self-placing copies exist only with mods (see
 Sources).
 
 The machine is [`blueprints/land-and-sun.txt`](blueprints/land-and-sun.txt);
-the run's experiment file, output and analysis are in
-[`followup/e177-whole-child/`](followup/e177-whole-child/).
+the run reproduces with one command, about 4 minutes, from
+[`reproduce/e177-whole-child/`](reproduce/e177-whole-child/) (see
+[Reproduce](#reproduce)).
 
 ## The step before: it makes its own robots
 
@@ -134,7 +135,7 @@ through its own robots and roboport was not found.
 
 The machine is [`blueprints/self-reproducing.txt`](blueprints/self-reproducing.txt);
 both runs' experiment files, output and analyses are in
-[`followup/`](followup/) (no one-command kit for these yet: the output
+[`followup/`](followup/) (no one-command kit for these two: the output
 and the scripts that read it, not the harness).
 
 ## Where it started: natural selection in a colony
@@ -392,10 +393,29 @@ water and sunlight, and the harness lays only the copy's ghost.
 
 ## Reproduce
 
-Each result ships as a kit in [`reproduce/`](reproduce/): the
-experiment's variants (world, machines and blueprints, one JSON each),
-its analysis, the expected table, each run's growth events, and the
-harness cut to what it needs. On Factorio 2.1.20, base game:
+The land-and-sun run and the colony's two results each ship as a kit in
+[`reproduce/`](reproduce/): the experiment's variants (world, machines
+and blueprints, one JSON each), its analysis, the expected table, the
+graded run's output to compare against, and the harness cut to what it
+needs.
+
+The land-and-sun machine, on Factorio 2.1.24, base game:
+
+```
+cd reproduce/e177-whole-child
+python3 reproduce.py --factorio /path/to/factorio --data /path/to/factorio/data
+```
+
+One headless run of 1,600,000 ticks, about 4 minutes on an Apple Silicon
+Mac; it grades the run and exits 0 when the table matches the graded
+one. A quick check, every row of the first 100,000 ticks against the
+graded run's (about 20 seconds):
+
+```
+python3 reproduce.py --quick gen 100000 --factorio /path/to/factorio --data /path/to/factorio/data
+```
+
+The colony's selection experiment, graded on Factorio 2.1.20:
 
 ```
 cd reproduce/e143-selection

@@ -10,5 +10,5 @@ Each result is one or more deterministic headless runs on a stated build (2.1.20
 - [README](https://github.com/hjkornn-phys/factorio-evolution#readme): the definition, results with numbers, follow-ups, FAQ, sources
 - [Colony viewer](https://hjkornn-phys.github.io/factorio-evolution/): every graded run of the selection experiment
 - [Blueprints](https://github.com/hjkornn-phys/factorio-evolution/tree/main/blueprints): the machines
-- [Follow-up runs](https://github.com/hjkornn-phys/factorio-evolution/tree/main/followup): experiment files, output and analyses
-- [Reproduction kits](https://github.com/hjkornn-phys/factorio-evolution/tree/main/reproduce): one command per claim
+- [Reproduction kits](https://github.com/hjkornn-phys/factorio-evolution/tree/main/reproduce): one command each for the land-and-sun run (about 4 minutes) and the colony's two results
+- [Follow-up runs](https://github.com/hjkornn-phys/factorio-evolution/tree/main/followup): the robots machine's experiment files, output and analyses

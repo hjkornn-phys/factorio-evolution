@@ -1,0 +1,9 @@
+{
+  "name": "lab-harness",
+  "version": "0.1.0",
+  "title": "Lab harness",
+  "author": "owner",
+  "description": "Builds one experiment at the first tick, then writes sink counts per window to script-output.",
+  "factorio_version": "2.1",
+  "dependencies": ["base"]
+}
