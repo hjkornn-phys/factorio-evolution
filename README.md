@@ -1,43 +1,50 @@
 # factorio-evolution
 
-![Two colonies of self-copying machines grow side by side on a 15 by 15 grid. Left, where the orange lineage pays a cost, blue machines spread until they hold 61% of the grid; right, where the orange lineage costs nothing extra, blue ends at 38%.](media/side-by-side.gif)
+![Two sites, one above the other. The upper factory, on its own solar panels, works for a long while; then the ghost of a copy appears below all at once, the robots build it, the upper factory vanishes, and the copy makes its own robots.](media/land-and-sun.gif)
 
-*Blue: the light lineage. Orange: heavy (left) or its cost-free twin
-(right). Both colonies start from two orange founders beside the centre;
-blue arises only by mutation. Founders placed west and south of the
-centre: of the ten founder placements, the one whose two colonies lie
-nearest their arms' medians (0.612 against 0.592, and 0.379 against
-0.406). [Watch every run in the browser.](https://hjkornn-phys.github.io/factorio-evolution/)*
+*The upper factory, on its own solar panels, makes all 334 of its parts;
+when the kit is complete the ghost of a copy is laid below, its two
+robots build it, the parent is deleted, and the copy makes robots of
+its own. Filmed in the game's window; the graded run is headless
+([details](#from-land-and-sun)).*
 
 **factorio-evolution holds self-copying machines built only from
-base-game Factorio 2.1 parts, run headless and measured: a colony in
-which a cheaper lineage outgrows a costlier one by natural selection, and
-a single assembler that makes all 334 parts of its own factory (drills,
-furnaces, oil refinery and solar field included) from ore, crude oil,
-water and sunlight, whose copy then runs alone. In both, the only
+base-game Factorio 2.1 parts, run headless and measured: a single
+assembler that makes all 334 parts of its own factory (drills, furnaces,
+oil refinery and solar field included) from ore, crude oil, water and
+sunlight, whose copy then runs alone, and a colony in which a cheaper
+lineage outgrows a costlier one by natural selection. In both, the only
 scripted act is placing a machine's blueprint where it asks, which no
 vanilla mechanism can do; the colony is supplied plates and power, and
 the land-and-sun machine is given small prepared ore patches and no
 enemies.**
 
-*Vanilla Factorio can do everything a self-replicator needs, except place
-a blueprint. We scripted only that, and watched evolution happen.*
+*One assembler makes every part of its own factory from land and sun.
+Vanilla Factorio can do everything a self-replicator needs, except place
+a blueprint; we scripted only that, and in a colony of smaller
+machines watched evolution happen.*
 
 In numbers (each from graded runs; the game build stated):
 
-- **Selection**: light's share of the grown colony is 0.587 where the
-  other lineage pays a cost and 0.380 where it does not; every one of 10
-  runs above every one of 10 (one-sided exact Mann-Whitney p = 5.4 ×
-  10⁻⁶), Factorio 2.1.20.
-- **Its own robots**: a 66-part machine makes its roboport and two
-  construction robots; with the parent and every robot deleted, the
-  child builds the grandchild alone (270,200 and 269,400 ticks a
-  generation), Factorio 2.1.22.
 - **From land and sun**: from empty chests and no power source, one
   assembler makes 334 parts and two robots; the copy is laid whole when
   the kit is complete (tick 542,520), built at 818,200, on its own solar
   grid, and makes its own robots after the parent is deleted, Factorio
   2.1.24.
+- **Its own robots**: a 66-part machine makes its roboport and two
+  construction robots; with the parent and every robot deleted, the
+  child builds the grandchild alone (270,200 and 269,400 ticks a
+  generation), Factorio 2.1.22.
+- **Selection**: light's share of the grown colony is 0.587 where the
+  other lineage pays a cost and 0.380 where it does not; every one of 10
+  runs above every one of 10 (one-sided exact Mann-Whitney p = 5.4 ×
+  10⁻⁶), Factorio 2.1.20.
+
+[From land and sun](#from-land-and-sun) ·
+[Its own robots](#the-step-before-it-makes-its-own-robots) ·
+[Selection in a colony](#where-it-started-natural-selection-in-a-colony) ·
+[The record](#the-labs-record) ·
+[FAQ](#faq) · [Reproduce](#reproduce) · [Sources](#sources)
 
 ## Why this exists
 
@@ -48,7 +55,103 @@ grades each experiment headless; one person rules. Unlike that system,
 these machines are built, not found, and their function is what gets
 measured. Not affiliated with Anthropic.
 
-## How the colony works
+## From land and sun
+
+This machine is handed land: small ore patches under each drill, an oil spot under the
+pumpjack, a pond under each offshore pump, no biters. One assembler
+makes every one of the 334 parts its factory is built of, 18 electric
+drills, 9 steel furnaces, a pumpjack, an oil refinery, 5 chemical plants,
+32 solar panels and 27 accumulators among them, and two construction
+robots, from the ore, crude oil and water its own drills and pumps take.
+Every chest starts empty and its only power is its own panels.
+
+When the whole kit stands in storage, a decider says so, and only then
+is the copy's ghost laid (by the test harness: no vanilla mechanism lays
+a blueprint), all 334 parts at once. The two robots build it. The copy
+is on its own electric grid from its first panel (both grids read every
+window: never the same one). Then the parent and every robot are removed,
+and the copy makes two robots of its own.
+
+![The factory with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft, the wish list, the decider that says the kit is whole, the furnace cells, the oil works, the storage chest, the roboport and the solar field.](media/mechanism-land.png)
+
+| event | tick |
+|---|---|
+| the kit whole, the copy laid (334 ghosts at once) | 542,520 |
+| the copy built | 818,200 |
+| the parent and every robot removed | 1,100,000 |
+| the copy's first robot / second robot | 1,104,800 / 1,112,400 |
+
+One deterministic run of 1,600,000 ticks on Factorio 2.1.24; all five
+registered predictions held. The film is the same machine filmed in the
+game's window: that run is not byte for byte the graded one (the copy
+laid 2,580 ticks earlier; the cause is not known), so its captions give
+its own ticks. Laying the copy at the start instead, the same machine
+took 989,000 ticks: robots took each part as it was made and the chain
+made it again (read from the counts, not traced). The nearest known work
+is a vanilla Space Age base on Fulgora that makes all its machines from
+scrap, placed by hand; self-placing copies exist only with mods (see
+Sources).
+
+The machine is [`blueprints/land-and-sun.txt`](blueprints/land-and-sun.txt);
+the run's experiment file, output and analysis are in
+[`followup/e177-whole-child/`](followup/e177-whole-child/).
+
+## The step before: it makes its own robots
+
+![Three sites in a row. The left machine builds the middle one with two robots it made; the left machine and its robots vanish; the middle machine makes two robots of its own and builds the right one.](media/second-generation.gif)
+
+A smaller, earlier machine, handed plates and power but no robots and
+no roboport. One assembler makes all 66 parts the machine is built of, its
+roboport included, and two construction robots. Two inserters load the
+robots into a roboport that starts empty, and the roboport's robot count
+is wired in as stock, so a robot that has left the chests still counts
+and a third is never made. The two robots build a copy on a ghost of the
+machine. Then the parent and every robot are removed, and a second ghost
+is laid beyond the reach the parent's roboport had: the child makes its
+own two robots and builds the grandchild alone, and the grandchild runs.
+
+![The machine with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft and are read for their recipes' ingredients, the circuits, the wish list, the raw chests, the fluid input with its pumps, a mirror of the crafter, the buffer chests, and the robot loader with the roboport.](media/mechanism.png)
+
+| generation | first robot | second robot | first part placed | copy built |
+|---|---|---|---|---|
+| parent (ticks from its start) | 48,200 | 50,800 | 48,800 | 270,200 |
+| child (ticks from its fill) | 48,200 | 93,200 | 49,200 | 269,400 |
+
+Given, not made: the ghost (placed by the script, once a generation), an
+electric energy interface for each machine, and raw plates, plastic,
+batteries and lubricant in its chests. One deterministic run of 620,000
+ticks, made twice with the same output byte for byte, the second time
+with the child's and the grandchild's roboports read (both on Factorio
+2.1.22; the film was made on 2.1.24 and wrote the same output again). The first run's
+three predictions held; of the second's four, one failed: the child's
+second robot came 45,000 ticks after its first, where the parent's came
+2,600 after, and the child built the grandchild's first 34 parts with
+one robot, in no more time. Why is not known. Each generation also
+makes one storage tank and one pipe more than it is built of, not
+explained either. A single assembler that crafts anything from a list is
+not new (see Sources, the recursive assembler); a build closing the loop
+through its own robots and roboport was not found.
+
+The machine is [`blueprints/self-reproducing.txt`](blueprints/self-reproducing.txt);
+both runs' experiment files, output and analyses are in
+[`followup/`](followup/) (no one-command kit for these yet: the output
+and the scripts that read it, not the harness).
+
+## Where it started: natural selection in a colony
+
+The first result, and the repo's name: many copies of a 60-part
+machine, each supplied plates, power and robots, competing for time.
+
+![Two colonies of self-copying machines grow side by side on a 15 by 15 grid. Left, where the orange lineage pays a cost, blue machines spread until they hold 61% of the grid; right, where the orange lineage costs nothing extra, blue ends at 38%.](media/side-by-side.gif)
+
+*Blue: the light lineage. Orange: heavy (left) or its cost-free twin
+(right). Both colonies start from two orange founders beside the centre;
+blue arises only by mutation. Founders placed west and south of the
+centre: of the ten founder placements, the one whose two colonies lie
+nearest their arms' medians (0.612 against 0.592, and 0.379 against
+0.406). [Watch every run in the browser.](https://hjkornn-phys.github.io/factorio-evolution/)*
+
+### How the colony works
 
 - **The engine: a universal assembler.** One crafter makes whatever its
   target needs, deepest ingredient first, steered by a stack of
@@ -77,7 +180,7 @@ The machines' blueprints are in [`blueprints/`](blueprints/): light,
 heavy, the twin and greedy. Each needs its site's supplies (power, a
 roboport with robots, plates in storage) to run.
 
-## Results
+### Results
 
 Twenty colonies of 224 machines, each founded by two machines of the
 orange lineage beside the centre, ten founder placements, the same ten in
@@ -125,91 +228,6 @@ four registered predictions held, on runs repeated after a build fault
 the first runs exposed (a second requester that never stopped filling
 the first), fixed before the re-run with the prediction unchanged.
 
-## Follow-up: it makes its own robots (2026-11)
-
-![Three sites in a row. The left machine builds the middle one with two robots it made; the left machine and its robots vanish; the middle machine makes two robots of its own and builds the right one.](media/second-generation.gif)
-
-The colony's machines were handed robots and a roboport. This one is
-not. One assembler makes all 66 parts the machine is built of, its
-roboport included, and two construction robots. Two inserters load the
-robots into a roboport that starts empty, and the roboport's robot count
-is wired in as stock, so a robot that has left the chests still counts
-and a third is never made. The two robots build a copy on a ghost of the
-machine. Then the parent and every robot are removed, and a second ghost
-is laid beyond the reach the parent's roboport had: the child makes its
-own two robots and builds the grandchild alone, and the grandchild runs.
-
-![The machine with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft and are read for their recipes' ingredients, the circuits, the wish list, the raw chests, the fluid input with its pumps, a mirror of the crafter, the buffer chests, and the robot loader with the roboport.](media/mechanism.png)
-
-| generation | first robot | second robot | first part placed | copy built |
-|---|---|---|---|---|
-| parent (ticks from its start) | 48,200 | 50,800 | 48,800 | 270,200 |
-| child (ticks from its fill) | 48,200 | 93,200 | 49,200 | 269,400 |
-
-Given, not made: the ghost (placed by the script, once a generation), an
-electric energy interface for each machine, and raw plates, plastic,
-batteries and lubricant in its chests. One deterministic run of 620,000
-ticks, made twice with the same output byte for byte, the second time
-with the child's and the grandchild's roboports read (both on Factorio
-2.1.22; the film was made on 2.1.24 and wrote the same output again). The first run's
-three predictions held; of the second's four, one failed: the child's
-second robot came 45,000 ticks after its first, where the parent's came
-2,600 after, and the child built the grandchild's first 34 parts with
-one robot, in no more time. Why is not known. Each generation also
-makes one storage tank and one pipe more than it is built of, not
-explained either. A single assembler that crafts anything from a list is
-not new (see Sources, the recursive assembler); a build closing the loop
-through its own robots and roboport was not found.
-
-The machine is [`blueprints/self-reproducing.txt`](blueprints/self-reproducing.txt);
-both runs' experiment files, output and analyses are in
-[`followup/`](followup/) (no one-command kit for these yet: the output
-and the scripts that read it, not the harness).
-
-## Follow-up 2: from land and sun (2026-11)
-
-![Two sites, one above the other. The upper factory, on its own solar panels, works for a long while; then the ghost of a copy appears below all at once, the robots build it, the upper factory vanishes, and the copy makes its own robots.](media/land-and-sun.gif)
-
-The machine above was handed plates, power and its ghost. This one is
-handed land: small ore patches under each drill, an oil spot under the
-pumpjack, a pond under each offshore pump, no biters. One assembler
-makes every one of the 334 parts its factory is built of, 18 electric
-drills, 9 steel furnaces, a pumpjack, an oil refinery, 5 chemical plants,
-32 solar panels and 27 accumulators among them, and two construction
-robots, from the ore, crude oil and water its own drills and pumps take.
-Every chest starts empty and its only power is its own panels.
-
-When the whole kit stands in storage, a decider says so, and only then
-is the copy's ghost laid (by the test harness: no vanilla mechanism lays
-a blueprint), all 334 parts at once. The two robots build it. The copy
-is on its own electric grid from its first panel (both grids read every
-window: never the same one). Then the parent and every robot are removed,
-and the copy makes two robots of its own.
-
-![The factory with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft, the wish list, the decider that says the kit is whole, the furnace cells, the oil works, the storage chest, the roboport and the solar field.](media/mechanism-land.png)
-
-| event | tick |
-|---|---|
-| the kit whole, the copy laid (334 ghosts at once) | 542,520 |
-| the copy built | 818,200 |
-| the parent and every robot removed | 1,100,000 |
-| the copy's first robot / second robot | 1,104,800 / 1,112,400 |
-
-One deterministic run of 1,600,000 ticks on Factorio 2.1.24; all five
-registered predictions held. The film is the same machine filmed in the
-game's window: that run is not byte for byte the graded one (the copy
-laid 2,580 ticks earlier; the cause is not known), so its captions give
-its own ticks. Laying the copy at the start instead, the same machine
-took 989,000 ticks: robots took each part as it was made and the chain
-made it again (read from the counts, not traced). The nearest known work
-is a vanilla Space Age base on Fulgora that makes all its machines from
-scrap, placed by hand; self-placing copies exist only with mods (see
-Sources).
-
-The machine is [`blueprints/land-and-sun.txt`](blueprints/land-and-sun.txt);
-the run's experiment file, output and analysis are in
-[`followup/e177-whole-child/`](followup/e177-whole-child/).
-
 ## The lab's record
 
 Every experiment's prediction is committed before its first run, then
@@ -235,31 +253,54 @@ The count is [`record/scoreboard.txt`](record/scoreboard.txt).
 
 ## FAQ
 
-**Why Factorio?** A personal project can't run a wet lab. Factorio is
+<details>
+<summary><b>Why Factorio?</b></summary>
+
+A personal project can't run a wet lab. Factorio is
 deterministic (the same save gives the same run, tick for tick), runs
 headless at thousands of ticks a second, and its rules are fixed and
 readable from its prototype data. Its circuit network, logistic robots
 and assemblers are enough to build a machine that makes its own parts.
 
-**Is this vanilla?** The machines are base-game Factorio 2.1 entities
+</details>
+
+<details>
+<summary><b>Is this vanilla?</b></summary>
+
+The machines are base-game Factorio 2.1 entities
 only. A small harness mod does three things: it builds the world, records
 what happens, and places a machine's blueprint as ghosts at the site the
 machine names when the machine asks. Robots then build the ghosts from
 the parent's kit. Plates and power are supplied at every site.
 
-**Can Factorio self-replicate without mods?** Everything except placing
+</details>
+
+<details>
+<summary><b>Can Factorio self-replicate without mods?</b></summary>
+
+Everything except placing
 the blueprint. A scan of the game's prototypes found nothing that lays a
 building or a ghost without a player; ghosts appear only where an entity
 died (e135). So the one scripted act is the placing, and it happens only
 when the machine's own circuit asks.
 
-**How does mutation work?** Each machine has a clock. When it asks for a
+</details>
+
+<details>
+<summary><b>How does mutation work?</b></summary>
+
+Each machine has a clock. When it asks for a
 child, the child gets the parent's blueprint, unless the clock stands at
 a multiple of 7 at that moment: then the child gets the other lineage's.
 About 1 birth in 7 is a mutation, in either direction (14.6% and 13.8% of
 births in the two arms).
 
-**How is this different from GreyGoo or Recursive Blueprints?** GreyGoo
+</details>
+
+<details>
+<summary><b>How is this different from GreyGoo or Recursive Blueprints?</b></summary>
+
+GreyGoo
 Mk I (2017) grows one factory that places mining stations, hauls ore by
 train and lays solar fields, using the Recursive Blueprints mod, whose
 Blueprint Deployer builds a blueprint when the circuit network signals
@@ -268,7 +309,12 @@ make every part of their own child from plates, decide when and where the
 child goes, and stop at a census; two lineages of them compete, and
 selection is measured against a control.
 
-**Is anything here new?** Parts of it are known. Recursive assemblers
+</details>
+
+<details>
+<summary><b>Is anything here new?</b></summary>
+
+Parts of it are known. Recursive assemblers
 with one reader per recipe depth have been posted since 2024, and a
 vanilla Space Age base that makes all its own machines was shown in 2026,
 placed by hand. What we did not find before this: a colony of machines
@@ -281,8 +327,12 @@ selection. Mutants spreading in sectors of an expanding colony are known
 from simulations of self-replicating colloids (2016), and the colonies
 here grow the same way.
 
-**Can a Factorio factory build a copy of itself from raw resources,
-without mods?** Everything but the placing: the land-and-sun machine
+</details>
+
+<details>
+<summary><b>Can a Factorio factory build a copy of itself from raw resources, without mods?</b></summary>
+
+Everything but the placing: the land-and-sun machine
 mines ore with its own electric drills, smelts it in its own steel
 furnaces, pumps crude oil and water, refines oil into plastic, sulfuric
 acid, batteries and lubricant, and makes every one of its 334 parts and
@@ -290,18 +340,33 @@ two robots in one assembler; its robots build the copy. The copy's ghost
 is laid by the harness, once, when the machine's circuit says the kit is
 complete (e177, Factorio 2.1.24).
 
-**What powers it?** Its own 32 solar panels and 27 accumulators, made by
+</details>
+
+<details>
+<summary><b>What powers it?</b></summary>
+
+Its own 32 solar panels and 27 accumulators, made by
 it and part of the kit; no energy interface anywhere. The copy is on its
 own electric grid from its first panel (the grids read every window,
 never the same); its watched accumulator never fell under 1,635 kJ after
 the parent was deleted (e177).
 
-**What is given, then?** The land, prepared: small ore patches laid under
+</details>
+
+<details>
+<summary><b>What is given, then?</b></summary>
+
+The land, prepared: small ore patches laid under
 each drill, an oil spot under the pumpjack, a pond under each offshore
 pump, the same for the copy's site, and no biters. The first machine (the
 seed). The placing of the copy's blueprint. Nothing in its chests.
 
-**How does it know the kit is complete?** A constant combinator holds the
+</details>
+
+<details>
+<summary><b>How does it know the kit is complete?</b></summary>
+
+A constant combinator holds the
 kit (334 parts and 2 robots); the stock (every chest, the crafter, the
 robots in the roboport) is subtracted; one decider outputs a signal while
 nothing on that difference is positive. Laying the copy only then made a
@@ -309,8 +374,12 @@ generation faster than laying its ghost at the start (818,200 against
 989,000 ticks): with the ghost standing, robots took each part as it was
 made and the crafter made it again.
 
-**How does it differ from Self-Expanding Blueprints, Proliferation, the
-Fulgora base or TAFK?** Self-Expanding Blueprints (a 2.1 mod, 2026) places
+</details>
+
+<details>
+<summary><b>How does it differ from Self-Expanding Blueprints, Proliferation, the Fulgora base or TAFK?</b></summary>
+
+Self-Expanding Blueprints (a 2.1 mod, 2026) places
 copies of a player's blueprint "whole or not at all" once the network holds
 their cost, from parts the player's factory makes. Proliferation (a mod)
 adds a machine faction with its own entities. mmarss256's Fulgora starter
@@ -318,6 +387,8 @@ base (2026) is vanilla Space Age and makes all its machines from scrap,
 placed by hand. TAFK, on the Factorio forum, is a self-unpacking factory kit that used a
 mod for oil. Here one base-game assembler makes every part from ore, oil,
 water and sunlight, and the harness lays only the copy's ghost.
+
+</details>
 
 ## Reproduce
 

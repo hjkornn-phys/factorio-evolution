@@ -11,7 +11,8 @@
 <meta property="og:url" content="https://hjkornn-phys.github.io/factorio-evolution/">
 <meta property="og:image" content="https://github.com/hjkornn-phys/factorio-evolution/raw/main/media/mechanism-land.png">
 <link rel="canonical" href="https://hjkornn-phys.github.io/factorio-evolution/">
-<style>.intro { margin-bottom: 28px; } .intro a { color: var(--series-1); } main > h2 { font-size: 1.15rem; margin: 0 0 4px; }</style>
+<style>.film { margin: 0 0 28px; } .film video { width: 100%; max-width: 960px; height: auto; display: block; } .film figcaption { max-width: 960px; }
+.intro { margin-bottom: 28px; } .intro a { color: var(--series-1); } main > h2 { font-size: 1.15rem; margin: 0 0 4px; }</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "factorio-evolution", "description": "Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured: a colony in which a cheaper lineage outgrows a costlier one by natural selection, and one assembler that makes all 334 parts of its own factory from ore, crude oil, water and sunlight, whose copy then runs alone. The only scripted act is placing a machine's blueprint.", "codeRepository": "https://github.com/hjkornn-phys/factorio-evolution", "url": "https://hjkornn-phys.github.io/factorio-evolution/", "license": "https://opensource.org/licenses/MIT", "programmingLanguage": ["Python", "Lua"], "author": {"@type": "Person", "name": "hjkornn-phys"}, "keywords": ["Factorio", "self-replication", "von Neumann machine", "artificial life", "evolution", "circuit network", "natural selection"]}</script>
 <style>
 :root {
@@ -139,8 +140,18 @@ select { font: inherit; color: var(--text-primary); background: var(--surface-0)
       alone on its own solar grid (Factorio 2.1.24). The only scripted act is placing a machine's blueprint, which no
       vanilla mechanism can do; the colony is supplied plates and power, and the land is prepared.</p>
     <p class="lede"><a href="https://github.com/hjkornn-phys/factorio-evolution">The repository</a>: films, blueprints, data, reproduction kits and an FAQ.
-      Below: every graded colony of the selection experiment.</p>
+      Below: the two machines' films, then every graded colony of the selection experiment.</p>
   </header>
+  <h2>From land and sun</h2>
+  <figure class="film">
+    <video controls muted loop playsinline preload="metadata" src="media/land-and-sun.mp4"></video>
+    <figcaption>The upper factory, on its own solar panels, makes all 334 of its parts; when the kit is complete the ghost of a copy is laid below, its two robots build it, the parent is deleted, and the copy makes robots of its own. Filmed in the game's window; the graded run is headless (Factorio 2.1.24).</figcaption>
+  </figure>
+  <h2>It makes its own robots</h2>
+  <figure class="film">
+    <video controls muted loop playsinline preload="metadata" src="media/second-generation.mp4"></video>
+    <figcaption>The left machine builds the middle one with two robots it made; the left machine and its robots are deleted; the middle machine makes two robots of its own and builds the right one (Factorio 2.1.22).</figcaption>
+  </figure>
   <h2>Colony growth</h2>
   <p class="lede">Each square is a site. A machine fills it from the tick robots finish building it, coloured by its lineage;
     a ring marks a birth that changed lineage (a mutant). Every colony started from two founders beside the centre.
