@@ -84,8 +84,15 @@ and the copy makes two robots of its own.
 One deterministic run of 1,600,000 ticks on Factorio 2.1.24; all five
 registered predictions held. The film is the same machine filmed in the
 game's window: that run is not byte for byte the graded one (the copy
-laid 2,580 ticks earlier; the cause is not known), so its captions give
-its own ticks. Laying the copy at the start instead, the same machine
+laid 2,580 ticks earlier), so its captions give its own ticks. The
+cause, traced (e178): the game's freeplay scenario sets the time of day
+to 0.7 when a first player joins, and a headless run has no player, so
+the film's sun ran 7,500 ticks late. The headless run given that one
+value lays and builds the copy on the film's ticks (539,940 and
+815,600); 439 of its 381,945 rows still differ from the film's, two
+accumulators' charge and the refinery's progress, by at most 4, and that
+is not explained. Given a time of day of 0 it is the graded run in every
+row. Laying the copy at the start instead, the same machine
 took 989,000 ticks: robots took each part as it was made and the chain
 made it again (read from the counts, not traced). The nearest known work
 is a vanilla Space Age base on Fulgora that makes all its machines from
@@ -232,9 +239,9 @@ the first), fixed before the re-run with the prediction unchanged.
 ## The lab's record
 
 Every experiment's prediction is committed before its first run, then
-graded against it. Of 688 graded predictions across the lab's 174
-graded experiments (2026-09-25 to 11-16), 555 held, 116 failed and 17
-held in part; 77 experiments had at least one prediction fail. Failures
+graded against it. Of 692 graded predictions across the lab's 175
+graded experiments (2026-09-25 to 11-16), 557 held, 118 failed and 17
+held in part; 78 experiments had at least one prediction fail. Failures
 stay in the record, which stays private; each prediction cited here is
 identified by the SHA-256 of the file as committed, before its result
 was, and its text is available on request:
@@ -249,6 +256,7 @@ was, and its text is available on request:
 | e160 | a second generation, by the child alone | `ae9f23017b548745925a8ba37ce0e377ada2340da9f85cdf6cf4f967e497592d` |
 | e161 | the child's own two robots, read | `c49374919360eb9289042e29a77465a857f67e3f9c8cbfbb9ebf2786e22c6267` |
 | e177 | from land and sun, the copy laid whole | `9a4ba7204dfb32a5943c168ebb7093b4a7564e1903b032308e1556b0ce41780b` |
+| e178 | why the film differs from the graded run | `797a6bfabf654a78bf2c9cb51837d3d51264d8ca2c79e55fa5678a17f5d33fe9` |
 
 The count is [`record/scoreboard.txt`](record/scoreboard.txt).
 

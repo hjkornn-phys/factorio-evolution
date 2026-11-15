@@ -24,7 +24,7 @@ CONFIG = os.environ.get("LAB_CONFIG") or os.path.join(LAB, "instance", "config.i
 MODS = os.path.join(LAB, "harness", "mods")
 WRITE = os.environ.get("LAB_WRITE") or os.path.join(LAB, "instance", "write")
 # The experiment's keys the mod reads (experiment.lua).
-EXP_KEYS = ("name", "area", "warmup", "window", "entities", "inserter_variants", "ups", "research", "wires", "observe", "chunks_radius", "pulses", "probe", "posdump", "tally", "progress", "events", "filter_read", "priority_read", "input_priority_read", "blueprint", "blueprints", "export_blueprint", "watch", "count_ghosts", "ghost_areas", "probes", "fluidprobes", "growth", "ghost_names", "screenshots", "count_networks", "count_cargo", "resources", "water_tiles")
+EXP_KEYS = ("name", "area", "warmup", "window", "entities", "inserter_variants", "ups", "research", "wires", "observe", "chunks_radius", "pulses", "probe", "posdump", "tally", "progress", "events", "filter_read", "priority_read", "input_priority_read", "blueprint", "blueprints", "export_blueprint", "watch", "count_ghosts", "ghost_areas", "probes", "fluidprobes", "growth", "ghost_names", "screenshots", "count_networks", "count_cargo", "resources", "water_tiles", "daytime")
 
 
 def lua(v):

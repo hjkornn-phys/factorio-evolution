@@ -111,6 +111,9 @@ local function setup()
       end
     end
   end
+  -- daytime (e178, opt-in): the surface's daytime at setup (0 is noon, a new map's own). A first
+  -- player in the GUI gets 0.7 from the freeplay scenario's crash site; a headless run never does.
+  if exp.daytime then surface.daytime = exp.daytime end
   local force = game.forces.player
   for _, tech in ipairs(exp.research or {}) do
     force.technologies[tech].researched = true
