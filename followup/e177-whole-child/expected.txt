@@ -1,0 +1,14 @@
+lay: run, D first 1, laid at, layings, most ghosts before, ghosts then, last window with a ghost, none from, parent crafted then
+gen  542600  542520  1  0  334  818000  818200  6397
+
+child: run, child crafted at removal, at end, reads 1 from, reads 2 from, most read after removal, its refinery after removal
+gen  1752  3928  1104800  1112400  2  77
+
+grids: run, windows with both, windows with equal ids, parent id, child id, child's first kJ
+gen  2015  0  2  6  63
+
+power: run, AC lowest, highest, days, days reaching the mark, longest at 0; cAC the same
+gen  1232  5000  39  39  0  1635  5000  20  20  0
+
+furnaces: run, A1, A2, A3, B1, B1i, B2, C1, C2, D1, least
+gen  823  568  201  455  2282  1075  2282  2282  2282  201

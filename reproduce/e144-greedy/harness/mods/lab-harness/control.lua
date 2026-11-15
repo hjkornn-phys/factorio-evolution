@@ -44,19 +44,24 @@ local function lay_seed(i, bp)
     error("growth seed " .. i .. " placed " .. placed .. " ghosts, expected " .. want ..
           "; in its area: " .. table.concat(list, ", "))
   end
-  -- One ghost of the anchor's name must stand exactly at the slot's anchor.
+  -- One ghost of the anchor's name must stand exactly at the slot's anchor, moved by
+  -- anchor_at (each lineage's offset, indexed as g.strings) for a lineage whose anchor
+  -- part stands elsewhere (a parasite: none of the machine's parts at the slot's anchor).
+  local ao = g.anchor_at and g.anchor_at[bp or 1] or {0, 0}
+  local ax, ay = s.anchor[1] + ao[1], s.anchor[2] + ao[2]
   local hit, seen = false, {}
   for _, an in ipairs(anchors) do
     local a = an.position
-    if math.abs(a.x - s.anchor[1]) <= 0.01 and math.abs(a.y - s.anchor[2]) <= 0.01 then hit = true end
+    if math.abs(a.x - ax) <= 0.01 and math.abs(a.y - ay) <= 0.01 then hit = true end
     seen[#seen + 1] = a.x .. "," .. a.y
   end
   if not hit then
-    error("growth seed " .. i .. ": no " .. g.anchor .. " at " .. s.anchor[1] .. "," .. s.anchor[2] ..
+    error("growth seed " .. i .. ": no " .. g.anchor .. " at " .. ax .. "," .. ay ..
           " (found at " .. table.concat(seen, "; ") .. ")")
   end
   storage.growth.pending[i] = true
   storage.growth.laid = storage.growth.laid + 1
+  return ghosts
 end
 
 local function setup()
@@ -78,6 +83,34 @@ local function setup()
     end
   end
   surface.set_tiles(tiles, true, true, true)
+  -- The land (e170): water tiles and resource entities, laid over the lab tiles and before any
+  -- entity or blueprint, so that ghosts of drills, pumpjacks and offshore pumps can stand.
+  -- water_tiles: a list of areas {{x1, y1}, {x2, y2}}; resources: {name, amount, area} (one
+  -- entity a tile) or {name, amount, position} (one entity, e.g. crude oil).
+  local water = {}
+  for _, w in ipairs(exp.water_tiles or {}) do
+    for x = w[1][1], w[2][1] - 1 do
+      for y = w[1][2], w[2][2] - 1 do
+        water[#water + 1] = {name = "water", position = {x, y}}
+      end
+    end
+  end
+  if #water > 0 then surface.set_tiles(water, true, true, true) end
+  for _, r in ipairs(exp.resources or {}) do
+    local at = {}
+    if r.position then
+      at[1] = r.position
+    else
+      for x = r.area[1][1], r.area[2][1] - 1 do
+        for y = r.area[1][2], r.area[2][2] - 1 do at[#at + 1] = {x + 0.5, y + 0.5} end
+      end
+    end
+    for _, p in ipairs(at) do
+      if not surface.create_entity{name = r.name, position = p, amount = r.amount} then
+        error("resources: could not lay " .. r.name .. " at " .. serpent.line(p))
+      end
+    end
+  end
   local force = game.forces.player
   for _, tech in ipairs(exp.research or {}) do
     force.technologies[tech].researched = true
@@ -127,6 +160,11 @@ local function setup()
     end
     if #found ~= 1 then error("blueprint anchor " .. bp.anchor.name .. " found " .. #found .. " times") end
     local o = {x = found[1].position.x - bp.anchor.x, y = found[1].position.y - bp.anchor.y}
+    -- expect_off (opt-in): the anchor must land exactly this far from its blueprint position,
+    -- so a blueprint placed whole tiles off, every ghost still standing, is a fault.
+    if bp.expect_off and (math.abs(o.x - bp.expect_off[1]) > 0.01 or math.abs(o.y - bp.expect_off[2]) > 0.01) then
+      error("blueprint offset " .. o.x .. "," .. o.y .. ", expected " .. bp.expect_off[1] .. "," .. bp.expect_off[2])
+    end
     for tag, t in pairs(bp.tags or {}) do
       local ent = surface.find_entity(t.name, {t.x + o.x, t.y + o.y})
       if not ent then error("blueprint tag " .. tag .. ": no " .. t.name .. " at " .. t.x .. "," .. t.y) end
@@ -166,7 +204,10 @@ local function setup()
       -- counts, or conds (ANDed, or ORed where a cond says compare = "or"; each with constant
       -- or second signal) -> outputs
       -- (each copying input, or a constant).
-      local sig = function(n) return {type = (n:sub(1, 7) == "signal-") and "virtual" or "item", name = n} end
+      local sig = function(n)
+        if n:sub(1, 6) == "fluid:" then return {type = "fluid", name = n:sub(7)} end
+        return {type = (n:sub(1, 7) == "signal-") and "virtual" or "item", name = n}
+      end
       local conds, outs = {}, {}
       for i, c in ipairs(e.decider.conds or {e.decider.cond}) do
         local x = {first_signal = sig(c.signal), comparator = c.comparator}
@@ -193,7 +234,10 @@ local function setup()
       -- One signal (signal, count), or several (signals: a list of {signal, count}).
       for i, k in ipairs(e.constant.signals or {{signal = e.constant.signal, count = e.constant.count}}) do
         local n = k.signal
-        sec.set_slot(i, {value = {type = (n:sub(1, 7) == "signal-") and "virtual" or "item", name = n, quality = "normal"}, min = k.count})
+        -- "fluid:<name>" is a fluid signal, "recipe:<name>" a recipe signal (e165); "signal-..." virtual; else an item.
+        local ty = (n:sub(1, 7) == "signal-") and "virtual" or "item"
+        if n:sub(1, 6) == "fluid:" then ty, n = "fluid", n:sub(7) elseif n:sub(1, 7) == "recipe:" then ty, n = "recipe", n:sub(8) end
+        sec.set_slot(i, {value = {type = ty, name = n, quality = "normal"}, min = k.count})
       end
       if e.constant.enabled ~= nil then cb.enabled = e.constant.enabled end
     end
@@ -225,8 +269,21 @@ local function setup()
       if e.control.enable_condition then
         local c = e.control.enable_condition
         cb.circuit_enable_disable = true
-        cb.circuit_condition = {first_signal = {type = (c.signal:sub(1, 7) == "signal-") and "virtual" or "item", name = c.signal},
-                                comparator = c.comparator, constant = c.constant}
+        -- A name "fluid:<name>" is a fluid signal; "signal-..." virtual; else an item.
+        local fs = (c.signal:sub(1, 6) == "fluid:") and {type = "fluid", name = c.signal:sub(7)}
+                   or {type = (c.signal:sub(1, 7) == "signal-") and "virtual" or "item", name = c.signal}
+        cb.circuit_condition = {first_signal = fs, comparator = c.comparator, constant = c.constant}
+      end
+      if e.control.robot_total then
+        -- A roboport that sends only its network's total of construction robots, as the
+        -- item signal named (so robots in the network count as stock of that item).
+        cb.read_items_mode = defines.control_behavior.roboport.read_items_mode.none
+        cb.read_robot_stats = true
+        cb.available_logistic_output_signal = nil
+        cb.total_logistic_output_signal = nil
+        cb.available_construction_output_signal = nil
+        cb.roboport_count_output_signal = nil
+        cb.total_construction_output_signal = {type = "item", name = e.control.robot_total}
       end
       if e.control.set_filters then
         -- Filters set from the circuit network (whitelist).
@@ -361,6 +418,18 @@ local function setup()
       ent.power_production = per_tick
       ent.electric_buffer_size = per_tick
       ent.energy = 0
+    end
+    if e.meter then
+      -- A metered supply (e174): an energy interface that produces nothing and discharges a
+      -- buffer far larger than any run draws, so what it gives is the buffer's fall, read each
+      -- tick: per window meter:<id>:kJ (given in the window) and meter:<id>:peak_kW (the most
+      -- given in one tick, as a rate).
+      ent.power_usage = 0
+      ent.power_production = 0
+      ent.electric_buffer_size = 1e15
+      ent.energy = 1e15
+      storage.meters = storage.meters or {}
+      storage.meters[#storage.meters + 1] = {id = e.meter, entity = ent, last = ent.energy, sum = 0, peak = 0}
     end
     if e.fluid then
       -- Fluid put into the entity's first fluidbox at build (e.g. {name = "water", amount = 100}).
@@ -603,6 +672,36 @@ script.on_event(defines.events.on_tick, function(event)
         for _, x in ipairs(game.surfaces[1].find_entities_filtered{area = ev.area, force = "player"}) do
           if x.valid and not skip[x.type] then x.die() end
         end
+      elseif ev.action == "destroy_area" then
+        -- Every entity of the player's force in an area removed with no corpse and no ghost
+        -- (ghosts and the character spared). robots = true: also every construction and
+        -- logistic robot on the surface, flying or held in any roboport.
+        local skip = {["entity-ghost"] = true, character = true}
+        for _, x in ipairs(game.surfaces[1].find_entities_filtered{area = ev.area, force = "player"}) do
+          if x.valid and not skip[x.type] then x.destroy() end
+        end
+        if ev.robots then
+          for _, x in ipairs(game.surfaces[1].find_entities_filtered{type = {"construction-robot", "logistic-robot"}}) do
+            if x.valid then x.destroy() end
+          end
+          for _, x in ipairs(game.surfaces[1].find_entities_filtered{type = "roboport"}) do
+            x.get_inventory(defines.inventory.roboport_robot).clear()
+          end
+        end
+      elseif ev.action == "lay" then
+        -- A blueprint string laid as ghosts at a tick (the seed a player would lay then).
+        local inv = game.create_inventory(1)
+        local st = inv[1]
+        st.set_stack{name = "blueprint"}
+        if st.import_stack(ev.string) ~= 0 then error("lay: blueprint import failed") end
+        local ghosts = st.build_blueprint{surface = game.surfaces[1], force = game.forces.player, position = ev.position,
+                                          build_mode = defines.build_mode.forced, skip_fog_of_war = false}
+        local placed = 0
+        for _, g in ipairs(ghosts) do
+          if g.valid and g.type == "entity-ghost" then placed = placed + 1 end
+        end
+        inv.destroy()
+        if placed ~= ev.expect then error("lay: placed " .. placed .. " ghosts, expected " .. tostring(ev.expect)) end
       elseif ev.action == "on" or ev.action == "off" then
         -- A constant combinator switched on or off at a tick.
         ent.get_or_create_control_behavior().enabled = ev.action == "on"
@@ -613,6 +712,15 @@ script.on_event(defines.events.on_tick, function(event)
         local c = game.surfaces[1].find_entity(ev.name, pos)
         if not c then error("fill_at: no " .. ev.name .. " at " .. serpent.line(pos)) end
         c.get_inventory(defines.inventory.chest).insert{name = ev.item, count = ev.count}
+      elseif ev.action == "fill_fluid_at" then
+        -- Fluid inserted into an entity found by position (bp: in the blueprint's coordinates).
+        local off = storage.bp_off or {x = 0, y = 0}
+        local pos = ev.bp and {ev.x + off.x, ev.y + off.y} or {ev.x, ev.y}
+        local c = game.surfaces[1].find_entity(ev.name, pos)
+        if not c then error("fill_fluid_at: no " .. ev.name .. " at " .. serpent.line(pos)) end
+        if c.insert_fluid{name = ev.fluid, amount = ev.amount} < ev.amount - 0.001 then
+          error("fill_fluid_at: " .. ev.name .. " did not take " .. ev.amount .. " " .. ev.fluid)
+        end
       elseif ev.action == "inject" then
         if not ent.get_transport_line(ev.line).insert_at(0, {name = ev.item, count = 1}) then
           error("could not inject " .. ev.item .. " on " .. ev.tag)
@@ -692,13 +800,40 @@ script.on_event(defines.events.on_tick, function(event)
       end
       gr.used = gr.used or {}
       gr.refused = gr.refused or 0
-      if dp.initial and not gr.initial_laid then
-        gr.initial_laid = true
-        for _, f in ipairs(dp.initial) do
-          lay_seed(f[1], f[2])
+      -- An entry may carry a third element {at, build} (e146): `at` (a multiple of 60) is the
+      -- first growth step it is acted on (none: the first step, as before); with `build` the
+      -- harness revives the laid ghosts into a built machine (no items drawn), which the next
+      -- step finds built and registers with its lineage. Every slot named in initial is marked
+      -- used, with its lineage, at the first step, so no machine lays a child on a site a later
+      -- founder will take.
+      if dp.initial and not gr.initial_marked then
+        gr.initial_marked, gr.initial_done = true, {}
+        for k, f in ipairs(dp.initial) do
+          local o = f[3] or {}
+          if o.at and o.at % 60 ~= 0 then
+            error("growth.deploy.initial entry " .. k .. ": at = " .. o.at .. " is not a multiple of 60")
+          end
           gr.used[f[1]] = true
           gr.bp_of[f[1]] = f[2]
+        end
+      end
+      for k, f in ipairs(dp.initial or {}) do
+        local o = f[3] or {}
+        if not gr.initial_done[k] and t >= (o.at or 0) then
+          gr.initial_done[k] = true
+          local ghosts = lay_seed(f[1], f[2])
           gr.log[#gr.log + 1] = string.format("%d,growth:laid:%d,%d\n%d,growth:type:%d,%d\n", t, f[1], t, t, f[1], f[2])
+          if o.build then
+            for _, gh in ipairs(ghosts) do
+              if gh.valid and gh.type == "entity-ghost" then
+                local _, ent = gh.revive{raise_revive = false}
+                if not ent then error("growth.deploy.initial entry " .. k .. ": a ghost of " .. gh.ghost_name .. " did not revive") end
+              end
+            end
+            local left = #game.surfaces[1].find_entities_filtered{area = g.slots[f[1]].area, type = "entity-ghost"}
+            if left > 0 then error("growth.deploy.initial entry " .. k .. ": " .. left .. " ghosts left after building") end
+            gr.log[#gr.log + 1] = string.format("%d,growth:placed:%d,%d\n", t, f[1], t)
+          end
         end
       end
       if not gr.site_at then
@@ -781,10 +916,25 @@ script.on_event(defines.events.on_tick, function(event)
       end
     end
   end
+  for _, m in ipairs(storage.meters or {}) do
+    if m.entity.valid then
+      local d = m.last - m.entity.energy
+      m.sum = m.sum + d
+      if d > m.peak then m.peak = d end
+      m.last = m.entity.energy
+    end
+  end
   if t == exp.warmup then
     for _, s in ipairs(storage.sinks) do s.entity.get_inventory(defines.inventory.chest).clear() end
   elseif t > exp.warmup and (t - exp.warmup) % exp.window == 0 then
     local lines = {}
+    for _, m in ipairs(storage.meters or {}) do
+      if m.entity.valid then
+        lines[#lines + 1] = string.format("%d,meter:%s:kJ,%d\n", t, m.id, math.floor(m.sum / 1000 + 0.5))
+        lines[#lines + 1] = string.format("%d,meter:%s:peak_kW,%d\n", t, m.id, math.floor(m.peak * 60 / 1000 + 0.5))
+      end
+      m.sum, m.peak = 0, 0
+    end
     -- Probe and tally first, before any sink is emptied below.
     if storage.probe then
       local net = storage.probe.entity.get_circuit_network(defines.wire_connector_id[storage.probe.connector or "circuit_red"])
@@ -792,7 +942,7 @@ script.on_event(defines.events.on_tick, function(event)
         -- A name "fluid:<name>" is a fluid signal; "signal-..." virtual; else an item.
         local sig = (n:sub(1, 6) == "fluid:") and {type = "fluid", name = n:sub(7)}
                     or {type = (n:sub(1, 7) == "signal-") and "virtual" or "item", name = n}
-        local v = (not ent or not ent.valid) and -2 or net and net.get_signal(sig) or -1
+        local v = (not storage.probe.entity.valid) and -2 or net and net.get_signal(sig) or -1
         lines[#lines + 1] = string.format("%d,probe:%s,%d\n", t, n, v)
       end
     end
@@ -851,9 +1001,20 @@ script.on_event(defines.events.on_tick, function(event)
       -- A tagged entity's fluid segment contents, by script (the truth a read is
       -- compared with), in thousandths of a unit: <id>:<fluid name>.
       local ent = storage.by_tag[fp.tag]
-      local f = ent and ent.valid and ent.get_fluid_segment_fluid(1)
-      lines[#lines + 1] = string.format("%d,fluid:%s:%s,%d\n", t, fp.id, f and f.name or "none",
-                                        f and math.floor(f.amount * 1000 + 0.5) or 0)
+      if fp.own then
+        -- The entity's own fluids (a crafting machine's fluidboxes), every fluid it holds:
+        -- own:<id>:<fluid name>, in thousandths; own:<id>:none,0 when it holds none.
+        local any = false
+        for name, amount in pairs(ent and ent.valid and ent.get_fluid_contents() or {}) do
+          lines[#lines + 1] = string.format("%d,own:%s:%s,%d\n", t, fp.id, name, math.floor(amount * 1000 + 0.5))
+          any = true
+        end
+        if not any then lines[#lines + 1] = string.format("%d,own:%s:none,0\n", t, fp.id) end
+      else
+        local f = ent and ent.valid and ent.get_fluid_segment_fluid(1)
+        lines[#lines + 1] = string.format("%d,fluid:%s:%s,%d\n", t, fp.id, f and f.name or "none",
+                                          f and math.floor(f.amount * 1000 + 0.5) or 0)
+      end
     end
     if exp.watch then
       -- Entities found by position each window (built later, e.g. by robots):
@@ -864,6 +1025,22 @@ script.on_event(defines.events.on_tick, function(event)
         local ent = game.surfaces[1].find_entity(wt.name, pos)
         if not ent then
           lines[#lines + 1] = string.format("%d,watch:%s:absent,1\n", t, wt.id)
+        elseif wt.energy then
+          -- Asked for (e175): the entity's stored energy (an accumulator's charge), in kJ.
+          lines[#lines + 1] = string.format("%d,watch:%s:kJ,%d\n", t, wt.id, math.floor(ent.energy / 1000 + 0.5))
+          lines[#lines + 1] = string.format("%d,watch:%s:present,1\n", t, wt.id)
+        elseif wt.fluid or wt.crafted then
+          -- Asked for (e170): a crafting machine's (a furnace's too) crafted count, and/or the
+          -- fluid of the entity's first fluidbox's segment, in whole units, rounded down.
+          if wt.crafted then
+            lines[#lines + 1] = string.format("%d,watch:%s:crafted,%d\n", t, wt.id, ent.products_finished)
+          end
+          if wt.fluid then
+            local f = ent.get_fluid_segment_fluid(1)
+            lines[#lines + 1] = string.format("%d,watch:%s:fluid:%s,%d\n", t, wt.id, f and f.name or "none",
+                                              f and math.floor(f.amount) or 0)
+          end
+          lines[#lines + 1] = string.format("%d,watch:%s:present,1\n", t, wt.id)
         elseif ent.type == "assembling-machine" then
           lines[#lines + 1] = string.format("%d,watch:%s:crafted,%d\n", t, wt.id, ent.products_finished)
         elseif ent.type == "inserter" then
@@ -880,6 +1057,11 @@ script.on_event(defines.events.on_tick, function(event)
             lines[#lines + 1] = string.format("%d,watch:%s:%s,%d\n", t, wt.id, it.name, it.count)
           end
           lines[#lines + 1] = string.format("%d,watch:%s:present,1\n", t, wt.id)
+        end
+        if ent and wt.grid then
+          -- Asked for (e177): the electric network the entity is on (-1: none), so two
+          -- machines' grids are read as one or two, not inferred from the layout.
+          lines[#lines + 1] = string.format("%d,watch:%s:grid,%d\n", t, wt.id, ent.electric_network_id or -1)
         end
       end
     end
@@ -900,6 +1082,29 @@ script.on_event(defines.events.on_tick, function(event)
       if exp.growth.request then
         lines[#lines + 1] = string.format("%d,growth:request,%d\n", t, storage.growth.request or 0)
       end
+    end
+    if exp.count_networks then
+      -- The player force's logistic networks on the surface (e146: one network spans every site).
+      local nets = game.forces.player.logistic_networks[game.surfaces[1].name] or {}
+      lines[#lines + 1] = string.format("%d,networks,%d\n", t, #nets)
+    end
+    if exp.count_cargo then
+      -- What the player force's robots carry, by item, summed over every network (e146: parts
+      -- in flight, so storage + cargo + built is a stock that closes each window).
+      local by, names = {}, {}
+      for _, net in ipairs(game.forces.player.logistic_networks[game.surfaces[1].name] or {}) do
+        for _, list in ipairs({net.construction_robots, net.logistic_robots}) do
+          for _, r in ipairs(list) do
+            local inv = r.get_inventory(defines.inventory.robot_cargo)
+            for _, it in ipairs(inv and inv.get_contents() or {}) do
+              if not by[it.name] then names[#names + 1] = it.name end
+              by[it.name] = (by[it.name] or 0) + it.count
+            end
+          end
+        end
+      end
+      table.sort(names)
+      for _, n in ipairs(names) do lines[#lines + 1] = string.format("%d,cargo:%s,%d\n", t, n, by[n]) end
     end
     if exp.count_ghosts then
       lines[#lines + 1] = string.format("%d,ghosts,%d\n", t, #game.surfaces[1].find_entities_filtered{area = exp.area, type = "entity-ghost"})
@@ -927,6 +1132,11 @@ script.on_event(defines.events.on_tick, function(event)
     end
 
     for _, s in ipairs(storage.sinks) do
+      if not s.entity.valid then
+        -- A sink removed during the run (an event): it holds nothing from then on.
+        lines[#lines + 1] = string.format("%d,%s,0\n", t, s.id)
+        goto continue_sink
+      end
       local inv = s.entity.get_inventory(defines.inventory.chest)
       lines[#lines + 1] = string.format("%d,%s,%d\n", t, s.id, inv.get_item_count())
       if s.by_item then
@@ -937,6 +1147,7 @@ script.on_event(defines.events.on_tick, function(event)
       end
       -- A kept sink is read, not emptied: its count is the chest's content.
       if not s.keep then inv.clear() end
+      ::continue_sink::
     end
     for _, b in ipairs(storage.belt_sinks) do
       for _, side in ipairs{"left", "right"} do

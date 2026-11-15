@@ -107,12 +107,97 @@ four registered predictions held, on runs repeated after a build fault
 the first runs exposed (a second requester that never stopped filling
 the first), fixed before the re-run with the prediction unchanged.
 
+## Follow-up: it makes its own robots (2026-11)
+
+![Three sites in a row. The left machine builds the middle one with two robots it made; the left machine and its robots vanish; the middle machine makes two robots of its own and builds the right one.](media/second-generation.gif)
+
+The colony's machines were handed robots and a roboport. This one is
+not. One assembler makes all 66 parts the machine is built of, its
+roboport included, and two construction robots. Two inserters load the
+robots into a roboport that starts empty, and the roboport's robot count
+is wired in as stock, so a robot that has left the chests still counts
+and a third is never made. The two robots build a copy on a ghost of the
+machine. Then the parent and every robot are removed, and a second ghost
+is laid beyond the reach the parent's roboport had: the child makes its
+own two robots and builds the grandchild alone, and the grandchild runs.
+
+![The machine with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft and are read for their recipes' ingredients, the circuits, the wish list, the raw chests, the fluid input with its pumps, a mirror of the crafter, the buffer chests, and the robot loader with the roboport.](media/mechanism.png)
+
+| generation | first robot | second robot | first part placed | copy built |
+|---|---|---|---|---|
+| parent (ticks from its start) | 48,200 | 50,800 | 48,800 | 270,200 |
+| child (ticks from its fill) | 48,200 | 93,200 | 49,200 | 269,400 |
+
+Given, not made: the ghost (placed by the script, once a generation), an
+electric energy interface for each machine, and raw plates, plastic,
+batteries and lubricant in its chests. One deterministic run of 620,000
+ticks, made twice with the same output byte for byte, the second time
+with the child's and the grandchild's roboports read (both on Factorio
+2.1.22; the film was made on 2.1.24 and wrote the same output again). The first run's
+three predictions held; of the second's four, one failed: the child's
+second robot came 45,000 ticks after its first, where the parent's came
+2,600 after, and the child built the grandchild's first 34 parts with
+one robot, in no more time. Why is not known. Each generation also
+makes one storage tank and one pipe more than it is built of, not
+explained either. A single assembler that crafts anything from a list is
+not new (see Sources, the recursive assembler); a build closing the loop
+through its own robots and roboport was not found.
+
+The machine is [`blueprints/self-reproducing.txt`](blueprints/self-reproducing.txt);
+both runs' experiment files, output and analyses are in
+[`followup/`](followup/) (no one-command kit for these yet: the output
+and the scripts that read it, not the harness).
+
+## Follow-up 2: from land and sun (2026-11)
+
+![Two sites, one above the other. The upper factory, on its own solar panels, works for a long while; then the ghost of a copy appears below all at once, the robots build it, the upper factory vanishes, and the copy makes its own robots.](media/land-and-sun.gif)
+
+The machine above was handed plates, power and its ghost. This one is
+handed land: small ore patches under each drill, an oil spot under the
+pumpjack, a pond under each offshore pump, no biters. One assembler
+makes every one of the 334 parts its factory is built of, 18 electric
+drills, 9 steel furnaces, a pumpjack, an oil refinery, 5 chemical plants,
+32 solar panels and 27 accumulators among them, and two construction
+robots, from the ore, crude oil and water its own drills and pumps take.
+Every chest starts empty and its only power is its own panels.
+
+When the whole kit stands in storage, a decider says so, and only then
+is the copy's ghost laid (by the test harness: no vanilla mechanism lays
+a blueprint), all 334 parts at once. The two robots build it. The copy
+is on its own electric grid from its first panel (both grids read every
+window: never the same one). Then the parent and every robot are removed,
+and the copy makes two robots of its own.
+
+![The factory with nine numbered boxes: the one assembler that crafts, the row of assemblers that never craft, the wish list, the decider that says the kit is whole, the furnace cells, the oil works, the storage chest, the roboport and the solar field.](media/mechanism-land.png)
+
+| event | tick |
+|---|---|
+| the kit whole, the copy laid (334 ghosts at once) | 542,520 |
+| the copy built | 818,200 |
+| the parent and every robot removed | 1,100,000 |
+| the copy's first robot / second robot | 1,104,800 / 1,112,400 |
+
+One deterministic run of 1,600,000 ticks on Factorio 2.1.24; all five
+registered predictions held. The film is the same machine filmed in the
+game's window: that run is not byte for byte the graded one (the copy
+laid 2,580 ticks earlier; the cause is not known), so its captions give
+its own ticks. Laying the copy at the start instead, the same machine
+took 989,000 ticks: robots took each part as it was made and the chain
+made it again (read from the counts, not traced). The nearest known work
+is a vanilla Space Age base on Fulgora that makes all its machines from
+scrap, placed by hand; self-placing copies exist only with mods (see
+Sources).
+
+The machine is [`blueprints/land-and-sun.txt`](blueprints/land-and-sun.txt);
+the run's experiment file, output and analysis are in
+[`followup/e177-whole-child/`](followup/e177-whole-child/).
+
 ## The lab's record
 
 Every experiment's prediction is committed before its first run, then
-graded against it. Of 547 graded predictions across the lab's 142
-graded experiments (2026-09-25 to 09-30), 444 held, 88 failed and 15
-held in part; 60 experiments had at least one prediction fail. Failures
+graded against it. Of 688 graded predictions across the lab's 174
+graded experiments (2026-09-25 to 11-16), 555 held, 116 failed and 17
+held in part; 77 experiments had at least one prediction fail. Failures
 stay in the record, which stays private; each prediction cited here is
 identified by the SHA-256 of the file as committed, before its result
 was, and its text is available on request:
@@ -124,6 +209,9 @@ was, and its text is available on request:
 | e142 | the kit's size as a cost in generations | `4a3d35fcd9e9011c230d610877431db7fd42d5fefc8e34e13986c0369002600b` |
 | e141 | the lineage as a gene that mutates | `4a2481b633087b9de9e2769939ac2e9e3f91ae1dc942a56bd47d7b594f8451bc` |
 | e135 | where a ghost can come from with no player | `800e4536d35c0e97a157c84bed5fb98d915ee2cd5f9cfdc7d276dbc4cb5c729f` |
+| e160 | a second generation, by the child alone | `ae9f23017b548745925a8ba37ce0e377ada2340da9f85cdf6cf4f967e497592d` |
+| e161 | the child's own two robots, read | `c49374919360eb9289042e29a77465a857f67e3f9c8cbfbb9ebf2786e22c6267` |
+| e177 | from land and sun, the copy laid whole | `9a4ba7204dfb32a5943c168ebb7093b4a7564e1903b032308e1556b0ce41780b` |
 
 The count is [`record/scoreboard.txt`](record/scoreboard.txt).
 
@@ -222,6 +310,10 @@ the same way (four runs of 800,000 ticks).
   (2024): the reader-per-depth idea behind the engine
 - [A mini self-replicating Fulgora starter base](https://www.reddit.com/r/factorio/comments/1q8kq0j/)
   (2026): a vanilla base that makes all its own machines, placed by hand
+- [Self-Expanding Blueprints](https://mods.factorio.com/mod/self-expanding-blueprints)
+  (2026, a 2.1 mod): copies placed "whole or not at all" once the network holds their cost
+- [Proliferation](https://mods.factorio.com/mod/proliferation) (2026, a mod):
+  a machine faction whose bases mine, grow and found new bases
 
 ## Cite
 

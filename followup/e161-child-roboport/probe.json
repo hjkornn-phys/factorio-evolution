@@ -1,0 +1,2200 @@
+{
+ "name": "e161-probe",
+ "seed": 1,
+ "area": [
+  [
+   -4,
+   -12
+  ],
+  [
+   116,
+   19
+  ]
+ ],
+ "entities": [
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    10.5,
+    0.5
+   ],
+   "tag": "M",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_contents": true,
+    "include_in_crafting": true
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    -0.5
+   ],
+   "tag": "R1",
+   "contents": {
+    "item": "iron-plate",
+    "count": 2200
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    -0.5
+   ],
+   "direction": "west",
+   "tag": "iR1",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    0.5
+   ],
+   "tag": "R2",
+   "contents": {
+    "item": "copper-plate",
+    "count": 1800
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    0.5
+   ],
+   "direction": "west",
+   "tag": "iR2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    1.5
+   ],
+   "tag": "R3",
+   "contents": {
+    "item": "steel-plate",
+    "count": 600
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    1.5
+   ],
+   "direction": "west",
+   "tag": "iR3",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    9.5,
+    -2.5
+   ],
+   "tag": "R4",
+   "contents": {
+    "item": "plastic-bar",
+    "count": 400
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    9.5,
+    -1.5
+   ],
+   "direction": "north",
+   "tag": "iR4",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    12.5,
+    1.5
+   ],
+   "direction": "west",
+   "tag": "iE1",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    13.5,
+    1.5
+   ],
+   "tag": "Bo",
+   "sink": "Bo",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    13.5,
+    0.5
+   ],
+   "direction": "south",
+   "tag": "iT",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    13.5,
+    -0.5
+   ],
+   "tag": "Bi",
+   "sink": "Bi",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    12.5,
+    -0.5
+   ],
+   "direction": "east",
+   "tag": "iE2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    2.5,
+    9.5
+   ],
+   "tag": "A1",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    6.5,
+    9.5
+   ],
+   "tag": "A2",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    10.5,
+    9.5
+   ],
+   "tag": "A2p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    14.5,
+    9.5
+   ],
+   "tag": "A3",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    18.5,
+    9.5
+   ],
+   "tag": "A3p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    22.5,
+    9.5
+   ],
+   "tag": "A4",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "constant-combinator",
+   "position": [
+    0.5,
+    5.5
+   ],
+   "direction": "north",
+   "tag": "K",
+   "constant": {
+    "signals": [
+     {
+      "signal": "assembling-machine-2",
+      "count": 10
+     },
+     {
+      "signal": "fast-inserter",
+      "count": 10
+     },
+     {
+      "signal": "decider-combinator",
+      "count": 13
+     },
+     {
+      "signal": "arithmetic-combinator",
+      "count": 5
+     },
+     {
+      "signal": "constant-combinator",
+      "count": 1
+     },
+     {
+      "signal": "steel-chest",
+      "count": 7
+     },
+     {
+      "signal": "storage-chest",
+      "count": 1
+     },
+     {
+      "signal": "substation",
+      "count": 4
+     },
+     {
+      "signal": "pipe",
+      "count": 8
+     },
+     {
+      "signal": "pump",
+      "count": 4
+     },
+     {
+      "signal": "storage-tank",
+      "count": 2
+     },
+     {
+      "signal": "roboport",
+      "count": 1
+     },
+     {
+      "signal": "construction-robot",
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    2.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negD",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    4.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negA",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    6.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G1",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-X",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Y",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    8.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negB",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    10.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FX",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-X",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    12.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G2",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-X",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-Y",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    14.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FY",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-Y",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    16.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G3",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-Y",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    20.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negC",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    22.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FZ",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-Z",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    24.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G4",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-Z",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "substation",
+   "position": [
+    1.0,
+    3.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    18.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    19.0,
+    13.0
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    27.0,
+    1.0
+   ]
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    26.5,
+    9.5
+   ],
+   "tag": "A4p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    30.5,
+    9.5
+   ],
+   "tag": "A5",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    26.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negE",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    28.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FV",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-V",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    30.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G5",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-V",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "substation",
+   "position": [
+    31.0,
+    13.0
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -1.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -2.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -3.5
+   ],
+   "tag": "P2"
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -4.5
+   ],
+   "tag": "P3"
+  },
+  {
+   "name": "pump",
+   "position": [
+    9.0,
+    -3.5
+   ],
+   "direction": "east",
+   "tag": "FL",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-A",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    12.0,
+    -3.5
+   ],
+   "direction": "west",
+   "tag": "FS",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-B",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    9.0,
+    -4.5
+   ],
+   "direction": "west",
+   "tag": "RL",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-L",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    12.0,
+    -4.5
+   ],
+   "direction": "east",
+   "tag": "RS",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-S",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pipe",
+   "position": [
+    7.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    7.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    5.5,
+    -4.5
+   ],
+   "tag": "TL",
+   "fluid": {
+    "name": "lubricant",
+    "amount": 20000
+   }
+  },
+  {
+   "name": "pipe",
+   "position": [
+    13.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    13.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    15.5,
+    -2.5
+   ],
+   "tag": "TS",
+   "fluid": {
+    "name": "sulfuric-acid",
+    "amount": 20000
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    4.5,
+    -0.5
+   ],
+   "tag": "AF",
+   "control": {
+    "set_recipe": true,
+    "read_ingredients": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    }
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    9.5,
+    -6.0
+   ],
+   "direction": "north",
+   "tag": "dRL",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:lubricant",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-L",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    11.5,
+    -6.0
+   ],
+   "direction": "north",
+   "tag": "dRS",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-S",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    9.5,
+    -8.0
+   ],
+   "direction": "north",
+   "tag": "dFL",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:lubricant",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-S",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "<",
+      "constant": 50,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-A",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    11.5,
+    -8.0
+   ],
+   "direction": "north",
+   "tag": "dFS",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-L",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "<",
+      "constant": 50,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-B",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    11.5,
+    -2.5
+   ],
+   "tag": "R5",
+   "contents": {
+    "item": "battery",
+    "count": 200
+   },
+   "sink": "R5",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    11.5,
+    -1.5
+   ],
+   "direction": "north",
+   "tag": "iR5",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    14.5,
+    -0.5
+   ],
+   "direction": "west",
+   "tag": "iQ1",
+   "filters": [
+    "construction-robot"
+   ],
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    15.5,
+    -0.5
+   ],
+   "tag": "Q",
+   "sink": "Q",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    16.5,
+    -0.5
+   ],
+   "direction": "west",
+   "tag": "iQ2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "roboport",
+   "position": [
+    19.0,
+    -2.0
+   ],
+   "tag": "RP",
+   "control": {
+    "robot_total": "construction-robot"
+   }
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    65.0,
+    2.0
+   ]
+  },
+  {
+   "name": "electric-energy-interface",
+   "position": [
+    103.0,
+    2.0
+   ]
+  }
+ ],
+ "wires": [
+  [
+   "R1",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R2",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R3",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R4",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR4",
+   "R4",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Bo",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Bi",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR1",
+   "R1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR2",
+   "R2",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR3",
+   "R3",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iE1",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iT",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iE2",
+   "Bi",
+   "red",
+   null,
+   null
+  ],
+  [
+   "M",
+   "negB",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "negB",
+   "negA",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "negA",
+   "negD",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "Bo",
+   "negC",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "K",
+   "negD",
+   "red",
+   null,
+   "output"
+  ],
+  [
+   "negD",
+   "A1",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A1",
+   "G1",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A1",
+   "A2",
+   "green",
+   null,
+   null
+  ],
+  [
+   "A2",
+   "A2p",
+   "green",
+   null,
+   null
+  ],
+  [
+   "negA",
+   "A1",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A2p",
+   "G2",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "A2",
+   "A3",
+   "red",
+   null,
+   null
+  ],
+  [
+   "A3",
+   "A3p",
+   "red",
+   null,
+   null
+  ],
+  [
+   "negB",
+   "A2",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A3",
+   "G3",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A3",
+   "A4",
+   "green",
+   null,
+   null
+  ],
+  [
+   "negC",
+   "A4",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A4",
+   "G4",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "A2p",
+   "FX",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A3p",
+   "FY",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "FX",
+   "FY",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FY",
+   "FZ",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FX",
+   "G2",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "FZ",
+   "G4",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "FX",
+   "FY",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FY",
+   "FZ",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FX",
+   "G1",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "FY",
+   "G3",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "G1",
+   "G2",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G2",
+   "G3",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G3",
+   "G4",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G1",
+   "M",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A4",
+   "A4p",
+   "green",
+   null,
+   null
+  ],
+  [
+   "A4p",
+   "FZ",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A4",
+   "A5",
+   "red",
+   null,
+   null
+  ],
+  [
+   "negC",
+   "negE",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "negE",
+   "A5",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A5",
+   "G5",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A5",
+   "FV",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "FZ",
+   "FV",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FZ",
+   "FV",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FV",
+   "G5",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "G4",
+   "G5",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "M",
+   "AF",
+   "green",
+   null,
+   null
+  ],
+  [
+   "AF",
+   "FL",
+   "red",
+   null,
+   null
+  ],
+  [
+   "FL",
+   "FS",
+   "red",
+   null,
+   null
+  ],
+  [
+   "AF",
+   "dRL",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "dRL",
+   "dRS",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "P3",
+   "dRL",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "dRL",
+   "dRS",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "RL",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "dRS",
+   "RS",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "dRL",
+   "dFL",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFS",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "dFL",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFS",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "dRL",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dRS",
+   "dRS",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFL",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dFS",
+   "dFS",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "R5",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR5",
+   "R5",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iQ1",
+   "Bi",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Q",
+   "iQ1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iQ2",
+   "Q",
+   "red",
+   null,
+   null
+  ],
+  [
+   "RP",
+   "iQ2",
+   "red",
+   null,
+   null
+  ]
+ ],
+ "research": [
+  "electronics",
+  "steam-power",
+  "automation-science-pack",
+  "logistic-science-pack",
+  "automation",
+  "steel-processing",
+  "automation-2",
+  "fast-inserter",
+  "circuit-network",
+  "plastics",
+  "advanced-circuit",
+  "electric-energy-distribution-1",
+  "electric-energy-distribution-2",
+  "engine",
+  "electric-engine",
+  "processing-unit",
+  "battery",
+  "robotics",
+  "construction-robotics",
+  "logistic-robotics",
+  "inserter-capacity-bonus-1",
+  "inserter-capacity-bonus-2",
+  "inserter-capacity-bonus-3",
+  "inserter-capacity-bonus-4",
+  "inserter-capacity-bonus-5",
+  "inserter-capacity-bonus-6",
+  "inserter-capacity-bonus-7",
+  "fluid-handling"
+ ],
+ "progress": [
+  "M",
+  "AF"
+ ],
+ "probes": [
+  {
+   "id": "af",
+   "tag": "AF",
+   "signals": [
+    "fluid:lubricant",
+    "fluid:sulfuric-acid"
+   ],
+   "connector": "circuit_red"
+  },
+  {
+   "id": "stub",
+   "tag": "P3",
+   "signals": [
+    "fluid:lubricant",
+    "fluid:sulfuric-acid"
+   ],
+   "connector": "circuit_green"
+  },
+  {
+   "id": "rp",
+   "tag": "RP",
+   "signals": [
+    "construction-robot"
+   ],
+   "connector": "circuit_red"
+  },
+  {
+   "id": "cp",
+   "at": {
+    "name": "roboport",
+    "x": 57.0,
+    "y": -1.0
+   },
+   "signals": [
+    "construction-robot"
+   ],
+   "connector": "circuit_red"
+  },
+  {
+   "id": "gp",
+   "at": {
+    "name": "roboport",
+    "x": 95.0,
+    "y": -1.0
+   },
+   "signals": [
+    "construction-robot"
+   ],
+   "connector": "circuit_red"
+  }
+ ],
+ "fluidprobes": [
+  {
+   "id": "TL",
+   "tag": "TL"
+  },
+  {
+   "id": "TS",
+   "tag": "TS"
+  },
+  {
+   "id": "stub",
+   "tag": "P2"
+  },
+  {
+   "id": "M",
+   "tag": "M",
+   "own": true
+  },
+  {
+   "id": "FL",
+   "tag": "FL",
+   "own": true
+  },
+  {
+   "id": "FS",
+   "tag": "FS",
+   "own": true
+  },
+  {
+   "id": "RL",
+   "tag": "RL",
+   "own": true
+  },
+  {
+   "id": "RS",
+   "tag": "RS",
+   "own": true
+  }
+ ],
+ "warmup": 0,
+ "window": 200,
+ "ticks": 620000,
+ "events": [
+  {
+   "tick": 290000,
+   "action": "destroy_area",
+   "area": [
+    [
+     -2,
+     -12
+    ],
+    [
+     36,
+     17
+    ]
+   ],
+   "robots": true
+  },
+  {
+   "tick": 290000,
+   "action": "lay",
+   "string": "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",
+   "position": [
+    92,
+    3
+   ],
+   "expect": 66
+  },
+  {
+   "tick": 290000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 45.5,
+   "y": 0.5,
+   "item": "iron-plate",
+   "count": 2200
+  },
+  {
+   "tick": 290000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 45.5,
+   "y": 1.5,
+   "item": "copper-plate",
+   "count": 1800
+  },
+  {
+   "tick": 290000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 45.5,
+   "y": 2.5,
+   "item": "steel-plate",
+   "count": 600
+  },
+  {
+   "tick": 290000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 47.5,
+   "y": -1.5,
+   "item": "plastic-bar",
+   "count": 400
+  },
+  {
+   "tick": 290000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 49.5,
+   "y": -1.5,
+   "item": "battery",
+   "count": 200
+  },
+  {
+   "tick": 290000,
+   "action": "fill_fluid_at",
+   "name": "storage-tank",
+   "x": 43.5,
+   "y": -3.5,
+   "fluid": "lubricant",
+   "amount": 20000
+  },
+  {
+   "tick": 580000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 83.5,
+   "y": 0.5,
+   "item": "iron-plate",
+   "count": 2200
+  },
+  {
+   "tick": 580000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 83.5,
+   "y": 1.5,
+   "item": "copper-plate",
+   "count": 1800
+  },
+  {
+   "tick": 580000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 83.5,
+   "y": 2.5,
+   "item": "steel-plate",
+   "count": 600
+  },
+  {
+   "tick": 580000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 85.5,
+   "y": -1.5,
+   "item": "plastic-bar",
+   "count": 400
+  },
+  {
+   "tick": 580000,
+   "action": "fill_at",
+   "name": "steel-chest",
+   "x": 87.5,
+   "y": -1.5,
+   "item": "battery",
+   "count": 200
+  },
+  {
+   "tick": 580000,
+   "action": "fill_fluid_at",
+   "name": "storage-tank",
+   "x": 81.5,
+   "y": -3.5,
+   "fluid": "lubricant",
+   "amount": 20000
+  }
+ ],
+ "blueprint": {
+  "string": "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",
+  "position": [
+   54,
+   3
+  ],
+  "expect": 66,
+  "ghost": true,
+  "anchor": {
+   "name": "constant-combinator",
+   "x": 0.5,
+   "y": 5.5
+  }
+ },
+ "watch": [
+  {
+   "id": "cM",
+   "name": "assembling-machine-2",
+   "x": 48.5,
+   "y": 1.5
+  },
+  {
+   "id": "cBi",
+   "name": "storage-chest",
+   "x": 51.5,
+   "y": 0.5
+  },
+  {
+   "id": "cQ",
+   "name": "steel-chest",
+   "x": 53.5,
+   "y": 0.5
+  },
+  {
+   "id": "gM",
+   "name": "assembling-machine-2",
+   "x": 86.5,
+   "y": 1.5
+  },
+  {
+   "id": "gBi",
+   "name": "storage-chest",
+   "x": 89.5,
+   "y": 0.5
+  },
+  {
+   "id": "gQ",
+   "name": "steel-chest",
+   "x": 91.5,
+   "y": 0.5
+  }
+ ],
+ "count_ghosts": true,
+ "ghost_areas": {
+  "child": [
+   [
+    36,
+    -11
+   ],
+   [
+    74,
+    18
+   ]
+  ],
+  "grand": [
+   [
+    74,
+    -11
+   ],
+   [
+    112,
+    18
+   ]
+  ]
+ },
+ "count_networks": true
+}

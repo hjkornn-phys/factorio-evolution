@@ -1,0 +1,2 @@
+gens: run, roboport reads 2 from, most robots read, child built at, grandchild's first part at, grandchild built at, child crafted, grandchild crafted
+gen  50800  2  270200  339200  559400  2677  317

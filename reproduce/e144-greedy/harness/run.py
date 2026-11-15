@@ -24,7 +24,7 @@ CONFIG = os.environ.get("LAB_CONFIG") or os.path.join(LAB, "instance", "config.i
 MODS = os.path.join(LAB, "harness", "mods")
 WRITE = os.environ.get("LAB_WRITE") or os.path.join(LAB, "instance", "write")
 # The experiment's keys the mod reads (experiment.lua).
-EXP_KEYS = ("name", "area", "warmup", "window", "entities", "inserter_variants", "ups", "research", "wires", "observe", "chunks_radius", "pulses", "probe", "posdump", "tally", "progress", "events", "filter_read", "priority_read", "input_priority_read", "blueprint", "blueprints", "export_blueprint", "watch", "count_ghosts", "ghost_areas", "probes", "fluidprobes", "growth", "ghost_names", "screenshots")
+EXP_KEYS = ("name", "area", "warmup", "window", "entities", "inserter_variants", "ups", "research", "wires", "observe", "chunks_radius", "pulses", "probe", "posdump", "tally", "progress", "events", "filter_read", "priority_read", "input_priority_read", "blueprint", "blueprints", "export_blueprint", "watch", "count_ghosts", "ghost_areas", "probes", "fluidprobes", "growth", "ghost_names", "screenshots", "count_networks", "count_cargo", "resources", "water_tiles")
 
 
 def lua(v):
@@ -244,6 +244,10 @@ def main(path):
     if bad:
         print(f"sinks missing windows: {bad}")
         return 1
+    if not sinks:
+        # An experiment with no item sink (fluids only, e165): the guard below has no referee.
+        print("no sink declared: the nothing-moved guard skipped, not passed")
+        return 0
     if not any(sum(per[s]) for s in sinks):
         print("nothing moved: every sink is empty, a harness fault until shown otherwise")
         return 1

@@ -1,0 +1,2 @@
+reads: run, same as e160, child's roboport has a network from, least before 290000, most before 290000, reads 1 from, reads 2 from, most in the run, grandchild's has a network from, most, at end
+probe  1  149600  2  2  338200  383200  2  440600  2  2

@@ -1,0 +1,5134 @@
+{
+ "name": "e177-gen",
+ "seed": 1,
+ "area": [
+  [
+   -22,
+   -28
+  ],
+  [
+   60,
+   59
+  ]
+ ],
+ "entities": [
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    10.5,
+    0.5
+   ],
+   "tag": "M",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_contents": true,
+    "include_in_crafting": true
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    -0.5
+   ],
+   "tag": "R1"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    -0.5
+   ],
+   "direction": "west",
+   "tag": "iR1",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    0.5
+   ],
+   "tag": "R2"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    0.5
+   ],
+   "direction": "west",
+   "tag": "iR2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    7.5,
+    1.5
+   ],
+   "tag": "R3"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    8.5,
+    1.5
+   ],
+   "direction": "west",
+   "tag": "iR3",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    9.5,
+    -2.5
+   ],
+   "tag": "R4"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    9.5,
+    -1.5
+   ],
+   "direction": "north",
+   "tag": "iR4",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    12.5,
+    1.5
+   ],
+   "direction": "west",
+   "tag": "iE1",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    13.5,
+    1.5
+   ],
+   "tag": "Bo",
+   "sink": "Bo",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    13.5,
+    0.5
+   ],
+   "direction": "south",
+   "tag": "iT",
+   "control": {
+    "read_hand": "hold"
+   },
+   "filters": [
+    "construction-robot"
+   ],
+   "filter_mode": "blacklist"
+  },
+  {
+   "name": "storage-chest",
+   "position": [
+    13.5,
+    -0.5
+   ],
+   "tag": "Bi",
+   "sink": "Bi",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    12.5,
+    -0.5
+   ],
+   "direction": "east",
+   "tag": "iE2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    2.5,
+    12.5
+   ],
+   "tag": "A1",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    6.5,
+    12.5
+   ],
+   "tag": "A2",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    10.5,
+    12.5
+   ],
+   "tag": "A2p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    14.5,
+    12.5
+   ],
+   "tag": "A3",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    18.5,
+    12.5
+   ],
+   "tag": "A3p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    22.5,
+    12.5
+   ],
+   "tag": "A4",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "constant-combinator",
+   "position": [
+    0.5,
+    5.5
+   ],
+   "direction": "north",
+   "tag": "K",
+   "constant": {
+    "signals": [
+     {
+      "signal": "accumulator",
+      "count": 27
+     },
+     {
+      "signal": "arithmetic-combinator",
+      "count": 6
+     },
+     {
+      "signal": "assembling-machine-2",
+      "count": 10
+     },
+     {
+      "signal": "chemical-plant",
+      "count": 5
+     },
+     {
+      "signal": "constant-combinator",
+      "count": 1
+     },
+     {
+      "signal": "decider-combinator",
+      "count": 17
+     },
+     {
+      "signal": "electric-mining-drill",
+      "count": 18
+     },
+     {
+      "signal": "fast-inserter",
+      "count": 31
+     },
+     {
+      "signal": "offshore-pump",
+      "count": 2
+     },
+     {
+      "signal": "oil-refinery",
+      "count": 1
+     },
+     {
+      "signal": "pipe",
+      "count": 55
+     },
+     {
+      "signal": "pipe-to-ground",
+      "count": 8
+     },
+     {
+      "signal": "pump",
+      "count": 4
+     },
+     {
+      "signal": "pumpjack",
+      "count": 1
+     },
+     {
+      "signal": "roboport",
+      "count": 1
+     },
+     {
+      "signal": "solar-panel",
+      "count": 32
+     },
+     {
+      "signal": "steel-chest",
+      "count": 11
+     },
+     {
+      "signal": "steel-furnace",
+      "count": 9
+     },
+     {
+      "signal": "storage-chest",
+      "count": 1
+     },
+     {
+      "signal": "storage-tank",
+      "count": 8
+     },
+     {
+      "signal": "substation",
+      "count": 12
+     },
+     {
+      "signal": "transport-belt",
+      "count": 74
+     },
+     {
+      "signal": "construction-robot",
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    2.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negD",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    4.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negA",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    6.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G1",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-X",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Y",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    8.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negB",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    10.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FX",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-X",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    12.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G2",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-X",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-Y",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    14.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FY",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-Y",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    16.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G3",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-Y",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-Z",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    20.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negC",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    22.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FZ",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-Z",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    24.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G4",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-Z",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-V",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "substation",
+   "position": [
+    1.0,
+    3.0
+   ],
+   "tag": "SA"
+  },
+  {
+   "name": "substation",
+   "position": [
+    20.0,
+    1.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    19.0,
+    7.0
+   ]
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    26.5,
+    12.5
+   ],
+   "tag": "A4p",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    30.5,
+    12.5
+   ],
+   "tag": "A5",
+   "control": {
+    "set_recipe": true,
+    "input_networks": {
+     "red": true,
+     "green": false
+    },
+    "output_networks": {
+     "red": false,
+     "green": true
+    },
+    "read_ingredients": true
+   }
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    26.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "negE",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    28.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "FV",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-anything",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-V",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    30.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "G5",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-V",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-everything",
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "substation",
+   "position": [
+    31.0,
+    7.0
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -1.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -2.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -3.5
+   ],
+   "tag": "P2"
+  },
+  {
+   "name": "pipe",
+   "position": [
+    10.5,
+    -4.5
+   ],
+   "tag": "P3"
+  },
+  {
+   "name": "pump",
+   "position": [
+    9.0,
+    -3.5
+   ],
+   "direction": "east",
+   "tag": "FL",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-A",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    12.0,
+    -3.5
+   ],
+   "direction": "west",
+   "tag": "FS",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-B",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    9.0,
+    -4.5
+   ],
+   "direction": "west",
+   "tag": "RL",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-L",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pump",
+   "position": [
+    12.0,
+    -4.5
+   ],
+   "direction": "east",
+   "tag": "RS",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-S",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "pipe",
+   "position": [
+    7.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    7.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    5.5,
+    -4.5
+   ],
+   "tag": "TL"
+  },
+  {
+   "name": "pipe",
+   "position": [
+    13.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    13.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    19.5,
+    -2.5
+   ],
+   "tag": "TS"
+  },
+  {
+   "name": "assembling-machine-2",
+   "position": [
+    4.5,
+    -0.5
+   ],
+   "tag": "AF",
+   "control": {
+    "set_recipe": true,
+    "read_ingredients": true,
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    }
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    9.5,
+    -6.0
+   ],
+   "direction": "north",
+   "tag": "dRL",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:lubricant",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-L",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    11.5,
+    -6.0
+   ],
+   "direction": "north",
+   "tag": "dRS",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-S",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    9.5,
+    -8.0
+   ],
+   "direction": "north",
+   "tag": "dFL",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:lubricant",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-S",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "<",
+      "constant": 50,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-A",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    11.5,
+    -8.0
+   ],
+   "direction": "north",
+   "tag": "dFS",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": ">",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     },
+     {
+      "signal": "signal-L",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:lubricant",
+      "comparator": "=",
+      "constant": 0,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     },
+     {
+      "signal": "fluid:sulfuric-acid",
+      "comparator": "<",
+      "constant": 50,
+      "networks": {
+       "red": false,
+       "green": true
+      },
+      "compare": "and"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-B",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    11.5,
+    -2.5
+   ],
+   "tag": "R5",
+   "sink": "R5",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    11.5,
+    -1.5
+   ],
+   "direction": "north",
+   "tag": "iR5",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "pipe",
+   "position": [
+    14.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    15.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    16.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    17.5,
+    -3.5
+   ]
+  },
+  {
+   "name": "chemical-plant",
+   "position": [
+    16.5,
+    -1.5
+   ],
+   "tag": "C",
+   "control": {
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_contents": true,
+    "include_in_crafting": true,
+    "enable_condition": {
+     "signal": "battery",
+     "comparator": ">",
+     "constant": 0
+    }
+   },
+   "recipe": "battery"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    14.5,
+    -0.5
+   ],
+   "direction": "east",
+   "tag": "iC",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "substation",
+   "position": [
+    11.0,
+    7.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    14.0,
+    -14.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    0.0,
+    -12.0
+   ]
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    19.5,
+    -0.5
+   ],
+   "tag": "RCm"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    18.5,
+    -0.5
+   ],
+   "direction": "east",
+   "tag": "iRCm"
+  },
+  {
+   "name": "chemical-plant",
+   "position": [
+    16.5,
+    1.5
+   ],
+   "direction": "east",
+   "tag": "C2",
+   "recipe": "plastic-bar",
+   "control": {
+    "input_networks": {
+     "red": false,
+     "green": true
+    },
+    "output_networks": {
+     "red": true,
+     "green": false
+    },
+    "read_contents": true,
+    "include_in_crafting": true,
+    "enable_condition": {
+     "signal": "plastic-bar",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    14.5,
+    1.5
+   ],
+   "direction": "east",
+   "tag": "iC2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    15.5,
+    4.5
+   ],
+   "tag": "RCc"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    15.5,
+    3.5
+   ],
+   "direction": "south",
+   "tag": "iRCc"
+  },
+  {
+   "name": "oil-refinery",
+   "position": [
+    9.5,
+    -15.5
+   ],
+   "tag": "RF",
+   "recipe": "advanced-oil-processing",
+   "control": {
+    "enable_condition": {
+     "signal": "signal-R",
+     "comparator": ">",
+     "constant": 0
+    }
+   }
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    11.5,
+    -11.5
+   ],
+   "tag": "TC"
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    5.5,
+    -13.5
+   ],
+   "tag": "TW1"
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    6.5,
+    -19.5
+   ],
+   "tag": "TH"
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    8.5,
+    -23.5
+   ],
+   "tag": "TLt"
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    12.5,
+    -20.5
+   ],
+   "tag": "TG"
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    10.5,
+    -22.5
+   ],
+   "direction": "north",
+   "tag": "DR",
+   "decider": {
+    "conds": [
+     {
+      "signal": "fluid:petroleum-gas",
+      "comparator": "<",
+      "constant": 300
+     },
+     {
+      "signal": "fluid:heavy-oil",
+      "comparator": "<",
+      "constant": 100,
+      "compare": "or"
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-R",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "chemical-plant",
+   "position": [
+    5.5,
+    -9.5
+   ],
+   "tag": "PL",
+   "recipe": "lubricant",
+   "control": {
+    "enable_condition": {
+     "signal": "fluid:lubricant",
+     "comparator": "<",
+     "constant": 200
+    }
+   }
+  },
+  {
+   "name": "chemical-plant",
+   "position": [
+    23.5,
+    -6.5
+   ],
+   "tag": "PS",
+   "recipe": "sulfur"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    21.5,
+    -6.5
+   ],
+   "direction": "east",
+   "tag": "iPS"
+  },
+  {
+   "name": "chemical-plant",
+   "position": [
+    19.5,
+    -6.5
+   ],
+   "tag": "PA",
+   "recipe": "sulfuric-acid",
+   "control": {
+    "enable_condition": {
+     "signal": "fluid:sulfuric-acid",
+     "comparator": "<",
+     "constant": 200
+    }
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    17.5,
+    -6.5
+   ],
+   "direction": "west",
+   "tag": "iRCa"
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    16.5,
+    -6.5
+   ],
+   "tag": "RCa"
+  },
+  {
+   "name": "storage-tank",
+   "position": [
+    19.5,
+    -10.5
+   ],
+   "tag": "TW2"
+  },
+  {
+   "name": "pipe",
+   "position": [
+    8.5,
+    -12.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    7.5,
+    -12.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    4.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    3.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -19.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -17.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -16.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -15.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -14.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -13.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -12.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    2.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    3.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    4.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    9.5,
+    -21.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    9.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    9.5,
+    -19.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    9.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    11.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    12.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    13.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    18.5,
+    1.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    18.5,
+    0.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    24.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    4.5,
+    -7.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    5.5,
+    -7.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    6.5,
+    -7.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    4.5,
+    -6.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    18.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    19.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    20.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    21.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    22.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    18.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    19.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    20.5,
+    -4.5
+   ]
+  },
+  {
+   "name": "arithmetic-combinator",
+   "position": [
+    14.5,
+    -2.0
+   ],
+   "direction": "north",
+   "tag": "NS",
+   "arith": {
+    "first": "signal-each",
+    "op": "*",
+    "constant": -1,
+    "output": "signal-each"
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    12.5,
+    -2.0
+   ],
+   "direction": "north",
+   "tag": "DP",
+   "decider": {
+    "conds": [
+     {
+      "signal": "plastic-bar",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "plastic-bar",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    13.5,
+    -2.0
+   ],
+   "direction": "north",
+   "tag": "DB",
+   "decider": {
+    "conds": [
+     {
+      "signal": "battery",
+      "comparator": ">",
+      "constant": 0
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "battery",
+      "constant": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    14.5,
+    -18.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    23.5,
+    -18.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    25.5,
+    -17.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    25.5,
+    -9.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    25.5,
+    -7.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    25.5,
+    1.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    24.5,
+    2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "pipe-to-ground",
+   "position": [
+    19.5,
+    2.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "pipe",
+   "position": [
+    24.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    25.5,
+    -18.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    25.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    25.5,
+    2.5
+   ]
+  },
+  {
+   "name": "pipe",
+   "position": [
+    18.5,
+    2.5
+   ]
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    13.5,
+    2.5
+   ],
+   "direction": "north",
+   "tag": "iQ1",
+   "filters": [
+    "construction-robot"
+   ],
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    13.5,
+    3.5
+   ],
+   "tag": "Q"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    13.5,
+    4.5
+   ],
+   "direction": "north",
+   "tag": "iQ2",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "steel-chest",
+   "position": [
+    13.5,
+    5.5
+   ],
+   "tag": "Q2",
+   "sink": "Q",
+   "sink_by_item": true,
+   "sink_keep": true
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    13.5,
+    6.5
+   ],
+   "direction": "north",
+   "tag": "iQ3",
+   "control": {
+    "read_hand": "hold"
+   }
+  },
+  {
+   "name": "roboport",
+   "position": [
+    15.0,
+    9.0
+   ],
+   "tag": "RP",
+   "control": {
+    "robot_total": "construction-robot"
+   }
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -17.5,
+    -3.5
+   ],
+   "direction": "north",
+   "tag": "gA1",
+   "control": {
+    "enable_condition": {
+     "signal": "iron-plate",
+     "comparator": "<",
+     "constant": 100
+    }
+   }
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -17.0,
+    -5.0
+   ],
+   "tag": "FA1"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -17.5,
+    -7.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -14.5,
+    -4.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -9.5,
+    -3.5
+   ],
+   "direction": "north",
+   "tag": "gA2",
+   "control": {
+    "enable_condition": {
+     "signal": "iron-plate",
+     "comparator": "<",
+     "constant": 100
+    }
+   }
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -9.0,
+    -5.0
+   ],
+   "tag": "FA2"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -9.5,
+    -7.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -6.5,
+    -4.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -1.5,
+    -3.5
+   ],
+   "direction": "north",
+   "tag": "gA3",
+   "control": {
+    "enable_condition": {
+     "signal": "stone-brick",
+     "comparator": "<",
+     "constant": 100
+    }
+   }
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -1.0,
+    -5.0
+   ],
+   "tag": "FA3"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -1.5,
+    -7.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    1.5,
+    -4.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -13.5,
+    2.5
+   ],
+   "direction": "south",
+   "tag": "gB2",
+   "control": {
+    "enable_condition": {
+     "signal": "copper-plate",
+     "comparator": "<",
+     "constant": 100
+    }
+   }
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -13.0,
+    4.0
+   ],
+   "tag": "FB2"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -13.5,
+    6.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -10.5,
+    3.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -5.5,
+    2.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -5.0,
+    4.0
+   ],
+   "tag": "FB1"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -2.5,
+    3.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    -5.5,
+    5.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    -5.0,
+    7.0
+   ],
+   "tag": "FB1i"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -2.5,
+    6.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    -5.5,
+    9.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    28.5,
+    -1.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    29.0,
+    -3.0
+   ],
+   "tag": "FC1"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    28.5,
+    -5.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    31.5,
+    -2.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    36.5,
+    -1.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    37.0,
+    -3.0
+   ],
+   "tag": "FC2"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    36.5,
+    -5.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    39.5,
+    -2.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    17.5,
+    -13.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "steel-furnace",
+   "position": [
+    19.0,
+    -14
+   ],
+   "tag": "FD1"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    21.5,
+    -14.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    18.5,
+    -16.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -17.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -16.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -15.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -14.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -13.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -12.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -11.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -10.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -9.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -8.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -7.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -6.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -5.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -4.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -3.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -2.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -1.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -0.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    0.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    1.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    2.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    3.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    4.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    5.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    6.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    7.5,
+    -2.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    7.5,
+    -1.5
+   ],
+   "direction": "north",
+   "tag": "lA"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -13.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -12.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -11.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -10.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -9.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -8.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -7.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -6.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -5.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -4.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -3.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -2.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -1.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    -0.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    0.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    1.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    2.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    3.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    4.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    5.5,
+    1.5
+   ],
+   "direction": "east"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    6.5,
+    1.5
+   ],
+   "direction": "west",
+   "tag": "lB"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    21.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    22.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    23.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    24.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    25.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    26.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    27.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    28.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    29.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    30.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    31.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    32.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    33.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    34.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    35.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    36.5,
+    -0.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    20.5,
+    -0.5
+   ],
+   "direction": "east",
+   "tag": "lC"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -13.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -12.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -11.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -10.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -9.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    -8.5
+   ],
+   "direction": "south"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    16.5,
+    -7.5
+   ],
+   "direction": "north",
+   "tag": "lD"
+  },
+  {
+   "name": "electric-mining-drill",
+   "position": [
+    19.5,
+    9.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    17.5,
+    7.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    17.5,
+    8.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    17.5,
+    9.5
+   ],
+   "direction": "north"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    15.5,
+    6.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    16.5,
+    6.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "transport-belt",
+   "position": [
+    17.5,
+    6.5
+   ],
+   "direction": "west"
+  },
+  {
+   "name": "fast-inserter",
+   "position": [
+    15.5,
+    5.5
+   ],
+   "direction": "south",
+   "tag": "lE"
+  },
+  {
+   "name": "pumpjack",
+   "position": [
+    14.5,
+    -9.5
+   ],
+   "direction": "west",
+   "tag": "PJ"
+  },
+  {
+   "name": "offshore-pump",
+   "position": [
+    4.5,
+    -15.5
+   ],
+   "direction": "north",
+   "tag": "OP1"
+  },
+  {
+   "name": "offshore-pump",
+   "position": [
+    22.5,
+    -9.5
+   ],
+   "direction": "north",
+   "tag": "OP2"
+  },
+  {
+   "name": "substation",
+   "position": [
+    -9.0,
+    -1.0
+   ],
+   "tag": "SW1"
+  },
+  {
+   "name": "substation",
+   "position": [
+    -9.0,
+    9.0
+   ],
+   "tag": "SW2"
+  },
+  {
+   "name": "substation",
+   "position": [
+    33.0,
+    -6.0
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -26.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -23.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -17.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -14.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -5.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    -2.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    0.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    44.5,
+    3.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -26.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -23.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -17.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -14.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -5.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    -2.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    0.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    47.5,
+    3.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -26.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -23.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -20.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -17.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -14.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -11.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -8.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -5.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    -2.5
+   ]
+  },
+  {
+   "name": "solar-panel",
+   "position": [
+    56.5,
+    0.5
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -27.0
+   ],
+   "tag": "AC"
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -25.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -23.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -21.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -19.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -17.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -15.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -13.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -11.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -9.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -7.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -5.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -3.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    52.0,
+    -1.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -27.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -25.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -23.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -21.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -19.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -17.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -15.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -13.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -11.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -9.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -7.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -5.0
+   ]
+  },
+  {
+   "name": "accumulator",
+   "position": [
+    54.0,
+    -3.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    50.0,
+    -20.0
+   ]
+  },
+  {
+   "name": "substation",
+   "position": [
+    50.0,
+    -4.0
+   ]
+  },
+  {
+   "name": "decider-combinator",
+   "position": [
+    0.5,
+    12.0
+   ],
+   "direction": "north",
+   "tag": "DQ",
+   "decider": {
+    "conds": [
+     {
+      "signal": "signal-everything",
+      "comparator": "<=",
+      "constant": 0,
+      "networks": {
+       "red": true,
+       "green": false
+      }
+     }
+    ],
+    "outputs": [
+     {
+      "signal": "signal-D",
+      "constant": 1,
+      "networks": {
+       "red": false,
+       "green": true
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "wires": [
+  [
+   "R1",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R2",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R3",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R4",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR4",
+   "R4",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Bo",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Bi",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR1",
+   "R1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR2",
+   "R2",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR3",
+   "R3",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iE1",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iT",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iE2",
+   "Bi",
+   "red",
+   null,
+   null
+  ],
+  [
+   "M",
+   "negB",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "negB",
+   "negA",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "negA",
+   "negD",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "Bo",
+   "negC",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "K",
+   "negD",
+   "red",
+   null,
+   "output"
+  ],
+  [
+   "negD",
+   "A1",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A1",
+   "G1",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A1",
+   "A2",
+   "green",
+   null,
+   null
+  ],
+  [
+   "A2",
+   "A2p",
+   "green",
+   null,
+   null
+  ],
+  [
+   "negA",
+   "A1",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A2p",
+   "G2",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "A2",
+   "A3",
+   "red",
+   null,
+   null
+  ],
+  [
+   "A3",
+   "A3p",
+   "red",
+   null,
+   null
+  ],
+  [
+   "negB",
+   "A2",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A3",
+   "G3",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A3",
+   "A4",
+   "green",
+   null,
+   null
+  ],
+  [
+   "negC",
+   "A4",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A4",
+   "G4",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "A2p",
+   "FX",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A3p",
+   "FY",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "FX",
+   "FY",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FY",
+   "FZ",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FX",
+   "G2",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "FZ",
+   "G4",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "FX",
+   "FY",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FY",
+   "FZ",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FX",
+   "G1",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "FY",
+   "G3",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "G1",
+   "G2",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G2",
+   "G3",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G3",
+   "G4",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "G1",
+   "M",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "A4",
+   "A4p",
+   "green",
+   null,
+   null
+  ],
+  [
+   "A4p",
+   "FZ",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A4",
+   "A5",
+   "red",
+   null,
+   null
+  ],
+  [
+   "negC",
+   "negE",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "negE",
+   "A5",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "A5",
+   "G5",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "A5",
+   "FV",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "FZ",
+   "FV",
+   "red",
+   "output",
+   "output"
+  ],
+  [
+   "FZ",
+   "FV",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "FV",
+   "G5",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "G4",
+   "G5",
+   "green",
+   "output",
+   "output"
+  ],
+  [
+   "M",
+   "AF",
+   "green",
+   null,
+   null
+  ],
+  [
+   "AF",
+   "FL",
+   "red",
+   null,
+   null
+  ],
+  [
+   "FL",
+   "FS",
+   "red",
+   null,
+   null
+  ],
+  [
+   "AF",
+   "dRL",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "dRL",
+   "dRS",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "P3",
+   "dRL",
+   "green",
+   null,
+   "input"
+  ],
+  [
+   "dRL",
+   "dRS",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "RL",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "dRS",
+   "RS",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "dRL",
+   "dFL",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFS",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "dFL",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFS",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "dRL",
+   "dRL",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dRS",
+   "dRS",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dFL",
+   "dFL",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "dFS",
+   "dFS",
+   "red",
+   "output",
+   "input"
+  ],
+  [
+   "R5",
+   "M",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iR5",
+   "R5",
+   "red",
+   null,
+   null
+  ],
+  [
+   "C",
+   "Bi",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iC",
+   "Bi",
+   "red",
+   null,
+   null
+  ],
+  [
+   "C2",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iC2",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "TG",
+   "DR",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "TH",
+   "TG",
+   "red",
+   null,
+   null
+  ],
+  [
+   "DR",
+   "RF",
+   "red",
+   "output",
+   null
+  ],
+  [
+   "TL",
+   "PL",
+   "red",
+   null,
+   null
+  ],
+  [
+   "TS",
+   "PA",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Bi",
+   "NS",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "NS",
+   "DB",
+   "green",
+   "output",
+   "input"
+  ],
+  [
+   "DB",
+   "DP",
+   "green",
+   "input",
+   "input"
+  ],
+  [
+   "FS",
+   "DP",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "DP",
+   "DB",
+   "red",
+   "input",
+   "input"
+  ],
+  [
+   "DP",
+   "C2",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "DB",
+   "C",
+   "green",
+   "output",
+   null
+  ],
+  [
+   "iQ1",
+   "Bo",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Q",
+   "iQ1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iQ2",
+   "Q",
+   "red",
+   null,
+   null
+  ],
+  [
+   "Q2",
+   "iQ2",
+   "red",
+   null,
+   null
+  ],
+  [
+   "iQ3",
+   "Q2",
+   "red",
+   null,
+   null
+  ],
+  [
+   "RP",
+   "iQ3",
+   "red",
+   null,
+   null
+  ],
+  [
+   "R1",
+   "SA",
+   "red",
+   null,
+   null
+  ],
+  [
+   "SA",
+   "SW1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "SW1",
+   "SW2",
+   "red",
+   null,
+   null
+  ],
+  [
+   "gA1",
+   "SW1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "gA2",
+   "SW1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "gB2",
+   "SW1",
+   "red",
+   null,
+   null
+  ],
+  [
+   "gA3",
+   "SA",
+   "red",
+   null,
+   null
+  ],
+  [
+   "A1",
+   "DQ",
+   "red",
+   null,
+   "input"
+  ],
+  [
+   "DQ",
+   "DQ",
+   "green",
+   "output",
+   "input"
+  ]
+ ],
+ "research": [
+  "electronics",
+  "steam-power",
+  "automation-science-pack",
+  "logistic-science-pack",
+  "automation",
+  "steel-processing",
+  "automation-2",
+  "fast-inserter",
+  "circuit-network",
+  "plastics",
+  "advanced-circuit",
+  "electric-energy-distribution-1",
+  "electric-energy-distribution-2",
+  "engine",
+  "electric-engine",
+  "processing-unit",
+  "battery",
+  "robotics",
+  "construction-robotics",
+  "logistic-robotics",
+  "inserter-capacity-bonus-1",
+  "inserter-capacity-bonus-2",
+  "inserter-capacity-bonus-3",
+  "inserter-capacity-bonus-4",
+  "inserter-capacity-bonus-5",
+  "inserter-capacity-bonus-6",
+  "inserter-capacity-bonus-7",
+  "oil-gathering",
+  "oil-processing",
+  "advanced-oil-processing",
+  "lubricant",
+  "sulfur-processing",
+  "fluid-handling",
+  "electric-mining-drill",
+  "advanced-material-processing",
+  "solar-energy",
+  "electric-energy-accumulators"
+ ],
+ "progress": [
+  "M",
+  "RF"
+ ],
+ "probes": [
+  {
+   "id": "askP",
+   "tag": "C2",
+   "connector": "circuit_green",
+   "signals": [
+    "plastic-bar"
+   ]
+  },
+  {
+   "id": "askB",
+   "tag": "C",
+   "connector": "circuit_green",
+   "signals": [
+    "battery"
+   ]
+  },
+  {
+   "id": "rp",
+   "tag": "RP",
+   "signals": [
+    "construction-robot"
+   ],
+   "connector": "circuit_red"
+  },
+  {
+   "id": "dq",
+   "tag": "DQ",
+   "signals": [
+    "signal-D"
+   ],
+   "connector": "combinator_output_green"
+  },
+  {
+   "id": "cp",
+   "at": {
+    "name": "roboport",
+    "x": 15.0,
+    "y": 53.0
+   },
+   "signals": [
+    "construction-robot"
+   ],
+   "connector": "circuit_red"
+  }
+ ],
+ "warmup": 0,
+ "window": 200,
+ "ticks": 1600000,
+ "events": [
+  {
+   "tick": 1100000,
+   "action": "destroy_area",
+   "area": [
+    [
+     -22,
+     -28
+    ],
+    [
+     60,
+     15
+    ]
+   ],
+   "robots": true
+  }
+ ],
+ "map_gen": {
+  "autoplace_controls": {
+   "coal": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "stone": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "copper-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "iron-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "uranium-ore": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "crude-oil": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "water": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "trees": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "enemy-base": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   },
+   "rocks": {
+    "frequency": 1,
+    "size": 0,
+    "richness": 1
+   }
+  },
+  "cliff_settings": {
+   "name": "cliff",
+   "cliff_elevation_0": 10,
+   "cliff_elevation_interval": 40,
+   "richness": 0
+  },
+  "peaceful_mode": false,
+  "starting_area": 1,
+  "width": 0,
+  "height": 0
+ },
+ "resources": [
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -20,
+     -10
+    ],
+    [
+     -17,
+     -7
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -15,
+     -6
+    ],
+    [
+     -12,
+     -3
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -12,
+     -10
+    ],
+    [
+     -9,
+     -7
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -7,
+     -6
+    ],
+    [
+     -4,
+     -3
+    ]
+   ]
+  },
+  {
+   "name": "stone",
+   "amount": 10000,
+   "area": [
+    [
+     -4,
+     -10
+    ],
+    [
+     -1,
+     -7
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     1,
+     -6
+    ],
+    [
+     4,
+     -3
+    ]
+   ]
+  },
+  {
+   "name": "copper-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -16,
+     6
+    ],
+    [
+     -13,
+     9
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -11,
+     2
+    ],
+    [
+     -8,
+     5
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -8,
+     9
+    ],
+    [
+     -5,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -3,
+     2
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     26,
+     -8
+    ],
+    [
+     29,
+     -5
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     31,
+     -4
+    ],
+    [
+     34,
+     -1
+    ]
+   ]
+  },
+  {
+   "name": "copper-ore",
+   "amount": 10000,
+   "area": [
+    [
+     34,
+     -8
+    ],
+    [
+     37,
+     -5
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     39,
+     -4
+    ],
+    [
+     42,
+     -1
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     21,
+     -15
+    ],
+    [
+     24,
+     -12
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     17,
+     -19
+    ],
+    [
+     20,
+     -17
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     19,
+     8
+    ],
+    [
+     22,
+     11
+    ]
+   ]
+  },
+  {
+   "name": "crude-oil",
+   "amount": 300000,
+   "position": [
+    14.5,
+    -9.5
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -20,
+     34
+    ],
+    [
+     -17,
+     37
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -15,
+     38
+    ],
+    [
+     -12,
+     41
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -12,
+     34
+    ],
+    [
+     -9,
+     37
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -7,
+     38
+    ],
+    [
+     -4,
+     41
+    ]
+   ]
+  },
+  {
+   "name": "stone",
+   "amount": 10000,
+   "area": [
+    [
+     -4,
+     34
+    ],
+    [
+     -1,
+     37
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     1,
+     38
+    ],
+    [
+     4,
+     41
+    ]
+   ]
+  },
+  {
+   "name": "copper-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -16,
+     50
+    ],
+    [
+     -13,
+     53
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -11,
+     46
+    ],
+    [
+     -8,
+     49
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     -8,
+     53
+    ],
+    [
+     -5,
+     56
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     -3,
+     46
+    ],
+    [
+     0,
+     52
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     26,
+     36
+    ],
+    [
+     29,
+     39
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     31,
+     40
+    ],
+    [
+     34,
+     43
+    ]
+   ]
+  },
+  {
+   "name": "copper-ore",
+   "amount": 10000,
+   "area": [
+    [
+     34,
+     36
+    ],
+    [
+     37,
+     39
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     39,
+     40
+    ],
+    [
+     42,
+     43
+    ]
+   ]
+  },
+  {
+   "name": "iron-ore",
+   "amount": 10000,
+   "area": [
+    [
+     21,
+     29
+    ],
+    [
+     24,
+     32
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     17,
+     25
+    ],
+    [
+     20,
+     27
+    ]
+   ]
+  },
+  {
+   "name": "coal",
+   "amount": 10000,
+   "area": [
+    [
+     19,
+     52
+    ],
+    [
+     22,
+     55
+    ]
+   ]
+  },
+  {
+   "name": "crude-oil",
+   "amount": 300000,
+   "position": [
+    14.5,
+    34.5
+   ]
+  }
+ ],
+ "water_tiles": [
+  [
+   [
+    3,
+    -18
+   ],
+   [
+    7,
+    -16
+   ]
+  ],
+  [
+   [
+    21,
+    -12
+   ],
+   [
+    25,
+    -10
+   ]
+  ],
+  [
+   [
+    3,
+    26
+   ],
+   [
+    7,
+    28
+   ]
+  ],
+  [
+   [
+    21,
+    32
+   ],
+   [
+    25,
+    34
+   ]
+  ]
+ ],
+ "growth": {
+  "string": "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",
+  "expect": 334,
+  "anchor": "constant-combinator",
+  "initial": 0,
+  "slots": [
+   {
+    "position": [
+     19.5,
+     37.0
+    ],
+    "anchor": [
+     0.5,
+     49.5
+    ],
+    "area": [
+     [
+      -22,
+      16
+     ],
+     [
+      60,
+      59
+     ]
+    ]
+   }
+  ],
+  "request": {
+   "tag": "DQ",
+   "connector": "combinator_output_green",
+   "signal": "signal-D"
+  }
+ },
+ "watch": [
+  {
+   "id": "cM",
+   "name": "assembling-machine-2",
+   "x": 10.5,
+   "y": 44.5,
+   "crafted": true
+  },
+  {
+   "id": "cRF",
+   "name": "oil-refinery",
+   "x": 9.5,
+   "y": 28.5,
+   "crafted": true
+  },
+  {
+   "id": "AC",
+   "name": "accumulator",
+   "x": 52.0,
+   "y": -27.0,
+   "energy": true,
+   "grid": true
+  },
+  {
+   "id": "cAC",
+   "name": "accumulator",
+   "x": 52.0,
+   "y": 17.0,
+   "energy": true,
+   "grid": true
+  },
+  {
+   "id": "cA1",
+   "name": "steel-furnace",
+   "x": -17.0,
+   "y": 39.0,
+   "crafted": true
+  },
+  {
+   "id": "cA2",
+   "name": "steel-furnace",
+   "x": -9.0,
+   "y": 39.0,
+   "crafted": true
+  },
+  {
+   "id": "cA3",
+   "name": "steel-furnace",
+   "x": -1.0,
+   "y": 39.0,
+   "crafted": true
+  },
+  {
+   "id": "cB1",
+   "name": "steel-furnace",
+   "x": -5.0,
+   "y": 48.0,
+   "crafted": true
+  },
+  {
+   "id": "cB1i",
+   "name": "steel-furnace",
+   "x": -5.0,
+   "y": 51.0,
+   "crafted": true
+  },
+  {
+   "id": "cB2",
+   "name": "steel-furnace",
+   "x": -13.0,
+   "y": 48.0,
+   "crafted": true
+  },
+  {
+   "id": "cC1",
+   "name": "steel-furnace",
+   "x": 29.0,
+   "y": 41.0,
+   "crafted": true
+  },
+  {
+   "id": "cC2",
+   "name": "steel-furnace",
+   "x": 37.0,
+   "y": 41.0,
+   "crafted": true
+  },
+  {
+   "id": "cD1",
+   "name": "steel-furnace",
+   "x": 19.0,
+   "y": 30,
+   "crafted": true
+  }
+ ],
+ "count_ghosts": true,
+ "ghost_areas": {
+  "child": [
+   [
+    -22,
+    16
+   ],
+   [
+    60,
+    59
+   ]
+  ]
+ },
+ "ghost_names": true,
+ "count_networks": true
+}

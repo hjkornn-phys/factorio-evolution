@@ -1,5 +1,5 @@
-The lab's prediction scoreboard, counted 2026-09-30 from every graded RESULT (publication/scoreboard.py in the lab; the record itself stays private).
+The lab's prediction scoreboard, counted 2026-11-16 from every graded RESULT (publication/scoreboard.py in the lab; the record itself stays private).
 
-predictions 547: held 444, failed 88, mixed 15
-experiments graded 142: with a failed or mixed prediction 60
-without a graded prediction: e016 e017
+predictions 688: held 555, failed 116, mixed 17
+experiments graded 174: with a failed or mixed prediction 77
+without a graded prediction: e016 e017 e147
