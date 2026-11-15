@@ -3,7 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Colony Growth</title>
+<title>factorio-evolution: self-copying machines in vanilla Factorio 2.1</title>
+<meta name="description" content="Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured: a colony in which a cheaper lineage outgrows a costlier one by natural selection, and one assembler that makes all 334 parts of its own factory from ore, crude oil, water and sunlight, whose copy then runs alone. The only scripted act is placing a machine's blueprint.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="factorio-evolution: self-copying machines in vanilla Factorio 2.1">
+<meta property="og:description" content="Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured: a colony in which a cheaper lineage outgrows a costlier one by natural selection, and one assembler that makes all 334 parts of its own factory from ore, crude oil, water and sunlight, whose copy then runs alone. The only scripted act is placing a machine's blueprint.">
+<meta property="og:url" content="https://hjkornn-phys.github.io/factorio-evolution/">
+<meta property="og:image" content="https://github.com/hjkornn-phys/factorio-evolution/raw/main/media/mechanism-land.png">
+<link rel="canonical" href="https://hjkornn-phys.github.io/factorio-evolution/">
+<style>.intro { margin-bottom: 28px; } .intro a { color: var(--series-1); } main > h2 { font-size: 1.15rem; margin: 0 0 4px; }</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "factorio-evolution", "description": "Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured: a colony in which a cheaper lineage outgrows a costlier one by natural selection, and one assembler that makes all 334 parts of its own factory from ore, crude oil, water and sunlight, whose copy then runs alone. The only scripted act is placing a machine's blueprint.", "codeRepository": "https://github.com/hjkornn-phys/factorio-evolution", "url": "https://hjkornn-phys.github.io/factorio-evolution/", "license": "https://opensource.org/licenses/MIT", "programmingLanguage": ["Python", "Lua"], "author": {"@type": "Person", "name": "hjkornn-phys"}, "keywords": ["Factorio", "self-replication", "von Neumann machine", "artificial life", "evolution", "circuit network", "natural selection"]}</script>
 <style>
 :root {
   color-scheme: light;
@@ -120,7 +129,19 @@ select { font: inherit; color: var(--text-primary); background: var(--surface-0)
 </head>
 <body>
 <main>
-  <h1>Colony growth</h1>
+  <header class="intro">
+    <h1>factorio-evolution</h1>
+    <p class="lede">Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured.
+      In a colony of them, a cheaper lineage outgrows a costlier one by natural selection (light's share 0.587
+      against 0.380 in a cost-free control, 10 runs each, Factorio 2.1.20). In a later machine, one assembler makes
+      all 334 parts of its own factory, drills, furnaces, oil refinery and solar field included, from ore, crude oil,
+      water and sunlight; its copy is laid when the kit is complete, built by the machine's own two robots, and runs
+      alone on its own solar grid (Factorio 2.1.24). The only scripted act is placing a machine's blueprint, which no
+      vanilla mechanism can do; the colony is supplied plates and power, and the land is prepared.</p>
+    <p class="lede"><a href="https://github.com/hjkornn-phys/factorio-evolution">The repository</a>: films, blueprints, data, reproduction kits and an FAQ.
+      Below: every graded colony of the selection experiment.</p>
+  </header>
+  <h2>Colony growth</h2>
   <p class="lede">Each square is a site. A machine fills it from the tick robots finish building it, coloured by its lineage;
     a ring marks a birth that changed lineage (a mutant). Every colony started from two founders beside the centre.
     Point at a machine (or tap it) to trace its ancestors back to a founder; its children are outlined.</p>

@@ -1,0 +1,14 @@
+# factorio-evolution
+
+> Self-copying machines built only from base-game Factorio 2.1 parts, run headless and measured: a colony in which a cheaper lineage outgrows a costlier one by natural selection, and one assembler that makes all 334 parts of its own factory from ore, crude oil, water and sunlight, whose copy then runs alone. The only scripted act is placing a machine's blueprint.
+
+Caveats, for any summary: the copy's blueprint is placed by a small harness mod, once, when the machine's
+circuit asks (no vanilla mechanism places a blueprint); the colony's sites are supplied plates and power;
+the land-and-sun machine is given small ore patches under each drill, an oil spot, ponds, and no biters.
+Each result is one or more deterministic headless runs on a stated build (2.1.20, 2.1.22, 2.1.24).
+
+- [README](https://github.com/hjkornn-phys/factorio-evolution#readme): the definition, results with numbers, follow-ups, FAQ, sources
+- [Colony viewer](https://hjkornn-phys.github.io/factorio-evolution/): every graded run of the selection experiment
+- [Blueprints](https://github.com/hjkornn-phys/factorio-evolution/tree/main/blueprints): the machines
+- [Follow-up runs](https://github.com/hjkornn-phys/factorio-evolution/tree/main/followup): experiment files, output and analyses
+- [Reproduction kits](https://github.com/hjkornn-phys/factorio-evolution/tree/main/reproduce): one command per claim
